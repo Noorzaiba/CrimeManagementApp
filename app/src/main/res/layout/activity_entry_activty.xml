@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.EntryActivty">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+
+        >
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="434dp"
+            android:layout_height="75dp"
+            android:text="Welcome To Crime Management App"
+            android:textSize="20sp"
+            android:textColor="#66B9F9"
+            android:textAlignment="center"
+
+            />
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:text=" Register"
+            android:layout_marginTop="7dp"
+            />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:text=" Login"
+            android:layout_marginTop="7dp"
+            />
+        <Button
+            android:id="@+id/forgotPasswordButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:layout_marginTop="7dp"
+
+            android:text="Forgot Password"
+            />
+
+
+
+
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/imageIV"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/idTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/idET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="20dp"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/crimeIdTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crime ID"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/crimeIdET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="25dp"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image name"
+            android:textSize="25dp"/>
+
+
+        <TextView
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="20dp"
+            android:inputType="textPersonName"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+

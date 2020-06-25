@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+      >
+        <TextView
+            android:id="@+id/registerTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Statements "
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:editable="false"
+            android:textSize="30sp"
+            android:textColor="#800080"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/crimeIdET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Crime ID"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:width="60dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/statementET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Statement"
+        android:inputType="textPersonName"
+        android:textSize="25dp"
+        android:width="60dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"/>
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/custom_button"
+            android:textSize="20sp"
+
+            android:gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+</LinearLayout>

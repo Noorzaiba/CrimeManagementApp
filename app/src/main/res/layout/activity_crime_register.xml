@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Crime Details"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"
+                android:textColor="#800080"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/type_of_crime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="select type of crime from below dropdown:"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:width="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+            <EditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter  Description"
+                android:inputType="textPersonName"
+                android:textSize="20dp"
+                android:width="60dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/statusET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter  Status"
+                android:inputType="textPersonName"
+                android:textSize="20dp"
+                android:width="60dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter date Crime occured"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:width="100dp"/>
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter time Crime occured"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="20dp"
+                android:width="100dp"/>
+
+            <EditText
+                android:id="@+id/investigatorET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="20dp"
+                android:width="60dp"
+                android:hint="Enter Investigator Incharged Email Id"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:inputType="textEmailAddress" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="submit"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/custom_button"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/addressWithoutMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+
+                android:background="@drawable/custom_button"
+                android:text="Enter Address withou Map" />
+            <Button
+                android:id="@+id/addressByMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:text="Enter Address Through Map" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

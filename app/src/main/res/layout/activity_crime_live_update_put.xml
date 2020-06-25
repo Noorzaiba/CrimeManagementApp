@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+        <TextView
+            android:id="@+id/registerTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Statement "
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:editable="false"
+            android:textSize="30sp"
+            android:textColor="#800080"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/idTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="ID:" />
+
+    <EditText
+        android:id="@+id/idET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter  ID"
+        android:editable="false"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:width="60dp"
+        android:textAlignment="center"/>
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date Of Creation:"
+        android:textSize="30sp"
+        />
+
+    <EditText
+        android:id="@+id/docET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DOC"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:editable="false" />
+        <TextView
+            android:id="@+id/douTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Last Updated Date:"
+            android:textSize="30dp"
+            android:width="20dp"/>
+        <EditText
+            android:id="@+id/douET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:editable="false"
+            android:hint="Date of last Updated "
+            android:textSize="20dp"
+            android:width="60dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/crimeIdTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Crime ID:" />
+
+
+
+    <EditText
+    android:id="@+id/crimeIdET"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+        android:enabled="false"
+    android:hint="Enter Crime ID"
+        android:gravity="center_horizontal"
+    android:textSize="25dp"
+    android:width="60dp"
+    android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/statementTV"
+        android:layout_width="match_parent"
+        android:text=" Statement:"
+        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        />
+
+<EditText
+    android:id="@+id/statementET"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Enter Statement"
+    android:inputType="textPersonName"
+    android:textSize="25dp"
+    android:width="60dp"
+    android:gravity="center_horizontal"
+    android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:background="@drawable/custom_button"
+            android:text="Click To Update" />
+
+
+
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:background="@drawable/custom_button"
+            android:text="Click To Save Changes" />
+
+
+
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

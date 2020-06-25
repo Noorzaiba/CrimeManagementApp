@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:gravity="center">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crime Reported Details"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"
+                android:textColor="#800080"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/typeOfCrimeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Type of crime: Select from dropdown list to update"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:width="20dp"/>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+            <EditText
+                android:id="@+id/typeOfCrimeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Type of crime"
+                android:editable="false"
+                android:textSize="30dp"
+                android:enabled="false"
+                android:width="60dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/idTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crime ID"
+                android:textSize="30dp"
+               />
+            <EditText
+                android:id="@+id/idET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:editable="false"
+                android:textSize="25dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="30dp"
+               />
+            <EditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter  Description"
+                android:inputType="textPersonName"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/statusTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="30dp"
+              />
+
+            <EditText
+                android:id="@+id/statusET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Status "
+                android:inputType="textPersonName"
+                android:textSize="25dp"
+                android:width="60dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+            <EditText
+                android:id="@+id/occuredDateAndTimeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="update Date and Time of Crime"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:enabled="false"
+                android:inputType="textPersonName"
+               />
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date and Time Crime occured"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:gravity="center"
+              />
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter time Crime occured"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:gravity="center_horizontal"
+                android:width="100dp"/>
+
+
+
+            <TextView
+                android:id="@+id/userTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Id"
+                android:textSize="30dp"
+               />
+
+
+            <EditText
+                android:id="@+id/userET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25dp"
+                android:width="60dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:hint="Enter Public User Email Id"
+                android:inputType="textEmailAddress" />
+
+
+
+            <TextView
+                android:id="@+id/docTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Record Created Date"
+                android:textSize="25dp"
+               />
+            <EditText
+                android:id="@+id/docET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:hint="Creation Time "
+                android:gravity="center"
+                android:textSize="20dp"
+                android:width="60dp"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/douTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Record last Updated Date"
+                android:textSize="25dp"
+                android:width="20dp"/>
+            <EditText
+                android:id="@+id/douET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:hint="Date of last Updated "
+                android:textSize="20dp"
+                android:width="60dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+
+
+            <TextView
+                android:id="@+id/idAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address ID"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/idAddressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:editable="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+               />
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address"
+                android:textSize="30sp"
+                />
+
+
+            <EditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address"
+                android:editable="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/cityTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="City"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/cityET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:editable="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/stateTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="State"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/stateET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="State"
+                android:editable="false"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pincode"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/pincodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="6"
+                android:hint="Pin Code"
+                android:textSize="25sp"
+                android:editable="false"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/latitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Latitude"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/latitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:hint="Latitude"
+                android:editable="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                 />
+            <TextView
+                android:id="@+id/longitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Longitude"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/longitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:editable="false"
+                android:hint="Longitude"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+
+
+
+
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:text="click to save changes"
+                android:background="@drawable/custom_button"
+                />
+            <Button
+                android:id="@+id/deleteRecord"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                />
+            <Button
+                android:id="@+id/viewAllPictures"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:text="Click To View All Pictures" />
+
+            <Button
+                android:id="@+id/addNewPicturesButton"
+                android:text="Add Pictures"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:background="@drawable/custom_button"
+                />
+            <Button
+                android:id="@+id/addressWithoutMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+
+                android:background="@drawable/custom_button"
+                android:text="Updatte Address without Map" />
+            <Button
+                android:id="@+id/addressByMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:text="Update Address Through Map" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

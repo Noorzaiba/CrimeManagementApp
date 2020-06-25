@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.CrimeManagementOptions">
+    <item android:id="@+id/view_my_profile"
+        android:title="View My Profile"></item>
+    <item android:id="@+id/password_reset"
+        android:title="Change Password"></item>
+    <item android:id="@+id/contact_us"
+        android:title="Contact Us"></item>
+
+    <item android:id="@+id/logout"
+        android:title="Logout"></item>
+
+
+</menu>

@@ -1,0 +1,278 @@
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:background="@color/white"
+android:layout_height="match_parent">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+      >
+
+        <TextView
+            android:id="@+id/ProfileTV"
+            android:textSize="30sp"
+            android:paddingTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:editable="false"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#800080"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/imageTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Click here to upload Image"></TextView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/imageIV">
+
+                </ImageView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/firstNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="First Name"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/lastNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Last Name"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/emailIDET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:hint="Email id"
+            android:inputType="textEmailAddress" />
+
+
+
+        <EditText
+            android:id="@+id/phoneNumberET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:maxLength="10"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+        <RadioGroup
+            android:id="@+id/genderRG"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="309dp">
+
+            <TextView
+                android:id="@+id/genderTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:editable="false"
+                android:text="Select Gender" />
+
+            <RadioButton
+                android:id="@+id/Male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="414dp"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/Female"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="414dp" />
+            <RadioButton
+                android:id="@+id/notknown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unknown"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="414dp" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/remarksET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Add remarks"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/salaryET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Salary"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="970dp" />
+
+        <EditText
+            android:id="@+id/crimeIdET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:hint="Crime id"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/occupationET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Occupation"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="1070dp" />
+
+        <EditText
+            android:id="@+id/ageET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Age"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:inputType="number" />
+
+
+        <EditText
+            android:id="@+id/adhaarNoET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:hint="Adhaar Number"
+            android:inputType="number" />
+
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:text="Register"
+            android:background="@drawable/custom_button"
+            />
+
+
+        <Button
+            android:id="@+id/addressWithoutMapButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+
+            android:background="@drawable/custom_button"
+            android:text="Enter Address without Map" />
+        <Button
+            android:id="@+id/addressByMapButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:background="@drawable/custom_button"
+            android:text="Enter Address Through Map" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

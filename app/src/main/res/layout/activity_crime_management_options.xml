@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#800080"
+    tools:context=".activities.CrimeManagementOptions">
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/adminMainMenuButton"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:text="Admin Management "
+                android:visibility="invisible"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Crime Management"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+        <GridLayout
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:padding="15dp"
+            android:background="@drawable/bg">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crime_list"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_marginStart="15dp"
+                       android:layout_marginLeft="15dp"
+                       android:layout_height="wrap_content"
+                       android:textSize="16sp"
+                       android:textColor="@color/white"
+                       android:text="Crime List">
+
+                   </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crime_register"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Register Crime">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/victim_list"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Victim List">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/victim_register"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:elevation="4dp"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Vicitm Register">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/criminal_list"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Criminal List">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/criminal_register"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Criminal Register">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crime_reported_list"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:elevation="4dp"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Crime Reported List">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_columnWeight="1"
+                android:id="@+id/public_user_list"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Public User List">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/investigator_details_list"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#66B9F9"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="Investigator List">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+
+</LinearLayout>

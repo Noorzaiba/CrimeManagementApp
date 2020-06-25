@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Investigator Admin Information"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="30sp"
+        android:textColor="#800080"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+    <TextView
+        android:id="@+id/IdTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="ID" />
+
+    <EditText
+        android:id="@+id/idET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:hint="ID"
+        android:textSize="25sp"
+        android:inputType="number"
+        />
+    <TextView
+        android:id="@+id/emailTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Email Id" />
+
+    <EditText
+        android:id="@+id/emailIdET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:hint="Enter Email ID"
+        android:inputType="textPersonName"
+        />
+    <TextView
+        android:id="@+id/salaryTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Salary " />
+    <EditText
+        android:id="@+id/salaryET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter salary"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/positionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Position " />
+
+
+    <EditText
+        android:id="@+id/positionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:hint="Enter position"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/achivementTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Achivements " />
+
+    <EditText
+        android:id="@+id/achivementsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:hint="Enter achivements"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
+        android:text="click to save changes" />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

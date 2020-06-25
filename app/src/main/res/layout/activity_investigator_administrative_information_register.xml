@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/registerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Investigator Admin Information Registration"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="30sp"
+        android:textColor="#800080"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+
+
+    <EditText
+        android:id="@+id/emailIdET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:hint="Email ID"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/salaryET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+
+    <EditText
+        android:id="@+id/positionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:hint="Position"
+        android:inputType="textPersonName"
+       />
+
+    <EditText
+        android:id="@+id/achivementsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:hint="Achivements"
+        android:inputType="textPersonName"
+      />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
+        android:text="Submit" />
+
+</LinearLayout>

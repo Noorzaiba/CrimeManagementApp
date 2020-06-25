@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CrimeManagementApp</string>
+    <string name="address">Address</string>
+    <string name="latitude">Latitude</string>
+    <string name="register">REGISTER</string>
+
+    <string-array name="type_of_crime">
+        <item>Robbery</item>
+        <item>Murder</item>
+
+        <item>Acid Throwing</item>
+        <item>Ragging</item>
+        <item>Property</item>
+        <item>Smuggling</item>
+        <item>Vandalism</item>
+        <item>Torture</item>
+        <item>Others</item>
+
+    </string-array>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_crime_reported_scene_image_list_for_admin">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>

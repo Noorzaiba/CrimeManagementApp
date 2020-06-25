@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:gravity="center">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Public User Profile"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"
+                android:textColor="#800080"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/imageTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                       ></TextView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/imageIV">
+
+                    </ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/firstNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="First Name"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/firstNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:tooltipText="First Name"
+                android:hint="First Name"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:editable="false"
+                />
+
+            <TextView
+                android:id="@+id/lastNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Last Name"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/lastNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Last Name"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:editable="false"
+                />
+
+            <TextView
+                android:id="@+id/emailNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Email ID"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/emailIDET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:hint="Email_id"
+                android:textSize="25sp"
+                android:editable="false"
+                />
+
+            <TextView
+                android:id="@+id/dobTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Date of Birth"
+                android:textSize="30sp"
+
+                />
+
+
+            <EditText
+                android:id="@+id/dobET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:editable="false"
+                android:hint="Date of Birth" />
+
+            <TextView
+                android:id="@+id/genderTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Gender"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/genderET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:editable="false"
+                android:hint="Gender" />
+
+
+            <TextView
+                android:id="@+id/phoneNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Phone Number"
+                android:hint="salary"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/phoneNumberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:editable="false"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:hint="Phone Number" />
+
+
+
+
+            <TextView
+                android:id="@+id/adhaarNoTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Adhaar Number"
+                android:textSize="30sp"
+
+                />
+
+
+            <EditText
+                android:id="@+id/adhaarNoET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="12"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:hint="Adhaar Number"
+                android:editable="false"
+               />
+
+            <TextView
+                android:id="@+id/idAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address ID"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/idAddressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:editable="false"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address"
+                android:editable="false"
+                android:textAlignment="center"
+
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/cityTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="City"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/cityET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:textAlignment="center"
+                android:editable="false"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/stateTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="State"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/stateET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="State"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:editable="false"
+               />
+
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pincode"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/pincodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="6"
+                android:hint="Pin Code"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:editable="false"
+                />
+
+            <TextView
+                android:id="@+id/latitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Latitude"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/latitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:hint="Latitude"
+                android:gravity="center"
+                android:editable="false"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/longitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Longitude"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/longitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:hint="Longitude"
+                android:editable="false"
+                android:textAlignment="center"
+                android:gravity="center"
+               />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

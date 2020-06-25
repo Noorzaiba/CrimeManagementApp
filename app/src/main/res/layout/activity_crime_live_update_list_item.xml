@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/idTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID:"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/idET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/statementTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Statement:"
+        android:textSize="30dp"/>
+
+
+    <TextView
+        android:id="@+id/statementET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:inputType="textPersonName"
+        />
+</LinearLayout>

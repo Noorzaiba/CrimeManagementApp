@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.crimemanagementapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.crime_reported_info.for_other_investigators.crime_repoorted_scene_images_details.CrimeReportedSceneImagesDetailActivity"></activity>
+
+        <activity android:name=".activities.crime_reported_info.for_other_investigators.crime_repoorted_scene_images_details.CrimeReportedSceneImagesListActivity"></activity>
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.crime_reported_scene_images_info.CrimeReportedImageDetailSceneForAdmin" />
+
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.crime_reported_scene_images_info.CrimeReportedSceneImageListForAdmin" />
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.crime_reported_scene_images_info.AddImageCrimeReportedSceneActivity" />
+        <activity android:name=".activities.cases_information.crime_scene_images_details.CrimeSceneDetailActivity" />
+        <activity android:name=".activities.cases_information.crime_scene_images_details.CrimeScenePicturesList" />
+        <activity android:name=".activities.cases_information.crime_scene_images_details.AddCrimeSceneImageActivity" />
+        <activity android:name=".activities.queries_info.qureries_by_public_users.QueryDetailPublicUser" />
+        <activity android:name=".activities.queries_info.queries_by_investigators.QueryDetailInvestigator" />
+        <activity android:name=".activities.queries_info.qureries_by_public_users.QueryListPublicUser" />
+        <activity android:name=".activities.queries_info.queries_by_investigators.QueryListInvesitgator" />
+        <activity android:name=".activities.Investigator_details.query_report_facilitiy_for_investigator.ContactUsRegisterActivity" />
+        <activity android:name=".activities.Investigator_details.investigator_details_for_other_investigators.InvestigatorListForOtherInvestigators" />
+        <activity android:name=".activities.Investigator_details.investigator_details_for_other_investigators.InvestigatorDetailsForOtherInvestigators" />
+        <activity android:name=".activities.Investigator_details.admin_level_investigator_details.InvestigatorAddressRegisterForAdmin" />
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.CrimeReportedUpdateAddressDetails" />
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.CrimeReportedUpdateDetails" />
+        <activity android:name=".activities.crime_reported_info.admin_level_crime_reported_details.CrimeReportedListForAdmin" />
+        <activity android:name=".activities.public_users_info.admin_level_public_user_info.PublicUserListForAdmin" />
+        <activity android:name=".activities.public_users_info.PublicUserDetailsActivity" />
+        <activity android:name=".activities.Investigator_details.admin_level_investigator_details.InvestigatorList" />
+        <activity android:name=".activities.Investigator_details.admin_level_investigator_details.InvestigatorPut" />
+        <activity android:name=".activities.Investigator_details.admin_level_investigator_details.InvestigatorAddressPut" />
+        <activity android:name=".activities.public_users_info.PublicUserList" />
+        <activity android:name=".activities.public_users_info.admin_level_public_user_info.PublicUserAddressRegister" />
+        <activity android:name=".activities.AdminMainMenuActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.map.MapActivity"
+            android:label="@string/title_activity_map" />
+        <activity android:name=".activities.map.SetMapActivity" />
+        <activity android:name=".activities.map.PermissionsActivity" />
+        <activity android:name=".activities.map.SetTheMapActivity" />
+        <activity android:name=".activities.map.ThePermisionActivity" />
+        <activity android:name=".activities.map.AddressTransferActivity" />
+        <activity android:name=".activities.map.MapsActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activities.public_users_info.admin_level_public_user_info.UpdatePublicUserProfile" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalList" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimList" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimRegister" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimToCriminalActivity" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalUpdate" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalAddressRegister" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalAddressUpdate" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimUpdate" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimAddressRegister" />
+        <activity android:name=".activities.criminal_and_victim_details.victim_details.VictimAddressUpdate" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalRegister" />
+        <activity android:name=".activities.criminal_and_victim_details.criminal_details.CriminalToVictimActivity" />
+        <activity android:name=".activities.cases_information.crime_live_updates_details.CrimeLiveUpdateList" />
+        <activity android:name=".activities.cases_information.crime_live_updates_details.CrimeLiveUpdatePut" />
+        <activity android:name=".activities.cases_information.CrimeList" />
+        <activity android:name=".activities.cases_information.CrimePut" />
+        <activity android:name=".activities.cases_information.CrimeAddressPut" />
+        <activity android:name=".activities.cases_information.crime_live_updates_details.CrimeLiveUpdatePost" />
+        <activity android:name=".activities.cases_information.CrimeRegister" />
+        <activity android:name=".activities.cases_information.CrimeAddressRegister" />
+        <activity android:name=".activities.Investigator_details.investigator_accounts.LoginActivity" />
+        <activity android:name=".activities.Investigator_details.investigator_accounts.LogoutActivity" />
+        <activity android:name=".activities.Investigator_details.InvestigatorRegisterActivity" />
+        <activity android:name=".activities.Investigator_details.UpdateInvestigatorProfile" />
+        <activity android:name=".activities.Investigator_details.investigator_password_reset.OTPVerficationForPasswordReset" />
+        <activity android:name=".activities.Investigator_details.InvestigatorAddressRegister" />
+        <activity android:name=".activities.Investigator_details.UpdateInvestigatorAddress" />
+        <activity android:name=".activities.Investigator_details.investigator_administrative_details.InvestigatorAdministrativeInformationRegister" />
+        <activity android:name=".activities.Investigator_details.investigator_administrative_details.InvestigatorAdministrativeInformationUpdate" />
+        <activity android:name=".activities.Investigator_details.investigator_administrative_details.InvestigatorAdministrativeInformationList" />
+        <activity android:name=".activities.Investigator_details.investigator_password_reset.InvestigatorPasswordReset" />
+        <activity android:name=".activities.Investigator_details.investigator_password_reset.OTPVerificationForForgotPassword" />
+        <activity android:name=".activities.public_users_info.admin_level_public_user_info.UpdatePublicUserAddress" />
+        <activity android:name=".activities.crime_reported_info.for_other_investigators.CrimeReportedList" />
+        <activity android:name=".activities.crime_reported_info.for_other_investigators.CrimeReportedPut" />
+        <activity android:name=".activities.CrimeManagementOptions" />
+        <activity android:name=".activities.miscellaneous.MainActivity" />
+        <activity android:name=".activities.EntryActivty">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

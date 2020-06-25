@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/idTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/idET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/typeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type of Crime"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/typeET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="30dp"/>
+
+
+    <TextView
+        android:id="@+id/descriptionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        />
+</LinearLayout>

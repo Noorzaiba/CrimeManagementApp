@@ -1,0 +1,565 @@
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:gravity="center">
+
+            <TextView
+                android:id="@+id/updateProfileTV"
+                android:textSize="30sp"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#800080"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/imageTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Click here to upload Image"></TextView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/imageIV">
+
+                    </ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/idTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ID"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/idET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/docTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Record Created"
+                android:textSize="25dp"
+                />
+            <EditText
+                android:id="@+id/docET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Date of Creation:"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/douTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Record Last Updated"
+                android:textSize="25sp"
+                />
+            <EditText
+                android:id="@+id/douET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Record last updated"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/firstNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="First Name"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/firstNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="First Name"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/lastNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Last Name"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/lastNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Last Name"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/emailIdTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Email Id"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/emailIDET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:hint="Email_id"
+                android:textSize="25sp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/phoneNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Phone Number"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/phoneNumberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+
+
+            <RadioGroup
+                android:id="@+id/genderRG"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="309dp">
+
+                <TextView
+                    android:id="@+id/genderTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:editable="false"
+                    android:text="Select Gender" />
+
+                <RadioButton
+                    android:id="@+id/maleRB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="414dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/femaleRB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="414dp" />
+
+                <RadioButton
+                    android:id="@+id/unknownRB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unknown"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="414dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/remarksTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Remarks"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/remarksET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Add remarks"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/salaryTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Salary"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/salaryET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Salary"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="106dp"
+                tools:layout_editor_absoluteY="970dp" />
+            <TextView
+                android:id="@+id/crimeIdTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Crime ID"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/crimeIdET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:hint="Crime id"
+                android:inputType="number" />
+            <TextView
+                android:id="@+id/occupationTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Occupation"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/occupationET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Occupation"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="1070dp" />
+            <TextView
+                android:id="@+id/ageTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Age"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/ageET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:hint="Age"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/adhaarNoTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Adhaar Number"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/adhaarNoET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="12"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:hint="Adhaar Number"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/idAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address ID"
+                android:textSize="30sp"
+                />
+            <EditText
+                android:id="@+id/idAddressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Address"
+                android:textSize="30sp"
+                />
+
+
+            <EditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/cityTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="City"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/cityET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/stateTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="State"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/stateET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="State"
+                android:enabled="false"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pincode"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/pincodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="6"
+                android:hint="Pin Code"
+                android:textSize="25sp"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:inputType="numberDecimal" />
+            <TextView
+                android:id="@+id/latitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Latitude"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/latitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:enabled="false"
+                android:hint="Latitude"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:inputType="numberDecimal" />
+            <TextView
+                android:id="@+id/longitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Longitude"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/longitudeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="25sp"
+                android:enabled="false"
+                android:hint="Longitude"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:text="Click to saves changes"
+                android:background="@drawable/custom_button"
+                />
+
+
+
+
+
+
+            <Button
+                android:id="@+id/deleteRecord"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+               />
+
+            <Button
+                android:id="@+id/addressWithoutMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+
+                android:background="@drawable/custom_button"
+                android:text="Updatte Address without Map" />
+            <Button
+                android:id="@+id/addressByMapButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:text="Update Address Through Map" />
+            <Button
+                android:id="@+id/victimToCriminalAndCriminalToVictimButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/imageNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="imageName"
+                android:textSize="30sp"
+                android:visibility="invisible"
+
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
