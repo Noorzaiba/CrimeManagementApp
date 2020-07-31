@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.cases_information.CrimeDefaultResponse;
 import com.example.crimemanagementapp.model.cases_information.CrimeLiveUpdationModel;
@@ -26,7 +27,7 @@ import retrofit2.Response;
 
 public class CrimeLiveUpdatePut extends AppCompatActivity {
     EditText crimeIdET, statementET, docET,idET,douET;
-    Button submitButton,updateButton;
+    Button submitButton,updateButton,backButton;
     String loggedInEmail,loggedInToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
         idET=findViewById(R.id.idET);
         submitButton = findViewById(R.id.submitButton);
         updateButton = findViewById(R.id.updateButton);
+        backButton = findViewById(R.id.backButton);
 
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
         loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
@@ -50,6 +52,18 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
             }
         });
 
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimePut.class);
+                i.putExtra("pk",Integer.parseInt(crimeIdET.getText().toString()));
+                startActivity(i);
+                finish();
+
+
+            }
+        });
         getCrimeLiveDetails();
 
         this.submitButton.setOnClickListener(new View.OnClickListener(){
@@ -92,6 +106,7 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
 
                         i.putExtra("intent_id",String.valueOf(crimeLiveUpdationModelResponse.getId()));
                         startActivity(i);
+                        finish();
                     }else{
                         Toast.makeText(CrimeLiveUpdatePut.this,"Some error occured",Toast.LENGTH_LONG).show();
                     }

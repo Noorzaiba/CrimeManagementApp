@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class CrimeLiveUpdatePost extends AppCompatActivity {
     EditText crimeIdET,statementET;
-    Button submitButton;
+    Button submitButton ,backButton;
     String loggedInEmail,loggedInToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +34,23 @@ public class CrimeLiveUpdatePost extends AppCompatActivity {
         crimeIdET=findViewById(R.id.crimeIdET);
         statementET=findViewById(R.id.statementET);
         submitButton=findViewById(R.id.submitButton);
+        backButton = findViewById(R.id.backButton);
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
         loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
         Intent intent= getIntent();
         final String crime_id=intent.getStringExtra("crime_id");
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimePut.class);
+                i.putExtra("pk",Integer.parseInt(crime_id));
+                startActivity(i);
+                finish();
+
+
+            }
+        });
         crimeIdET.setText(crime_id);
         submitButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -108,6 +121,7 @@ public class CrimeLiveUpdatePost extends AppCompatActivity {
                         Intent i=new Intent(getApplicationContext(),CrimePut.class);
                         i.putExtra("pk",Integer.parseInt(crimeIdET.getText().toString()));
                         startActivity(i);
+                        finish();
                     }else{
                         Toast.makeText(CrimeLiveUpdatePost.this,"error occured",Toast.LENGTH_LONG).show();
                     }

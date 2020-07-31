@@ -6,6 +6,7 @@
     import android.view.ViewGroup;
     import android.widget.AdapterView;
     import android.widget.BaseAdapter;
+    import android.widget.Button;
     import android.widget.ListView;
     import android.widget.TextView;
     import android.widget.Toast;
@@ -34,6 +35,7 @@
         int id_list[];
         String loggedInEmail,loggedInToken;
         ListView listView;
+        Button backButton;
         int crime_id_size = 0;
         int z=0;
 
@@ -45,8 +47,23 @@
             listView = findViewById(R.id.listView);
             loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
             loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
+            backButton = findViewById(R.id.backButton);
+
+
             Intent intent = getIntent();
             final int pk = intent.getIntExtra("crime_id_para", 0);
+            this.backButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+
+                    Intent i=new Intent(getApplicationContext(), CrimePut.class);
+                    i.putExtra("pk",pk);
+                    startActivity(i);
+                    finish();
+
+
+                }
+            });
             Toast.makeText(CrimeLiveUpdateList.this, String.valueOf(pk), Toast.LENGTH_LONG).show();
             Call<CrimeDefaultResponse> call = RetrofitClient
                     .getInstance()
@@ -108,6 +125,7 @@
         }
 
         if (crime_id_size > -1) {
+
             CrimeLiveUpdateList.CustomAdapter customAdapter = new CrimeLiveUpdateList.CustomAdapter();
             listView.setAdapter(customAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -120,6 +138,7 @@
 
                     i.putExtra("intent_id",String.valueOf(id_list[position]));
                     startActivity(i);
+                    finish();
 
                 }
             });

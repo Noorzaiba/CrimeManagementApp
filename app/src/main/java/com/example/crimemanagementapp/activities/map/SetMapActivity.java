@@ -458,5 +458,6 @@ public class SetMapActivity extends AppCompatActivity implements OnMapReadyCallb
         i.putExtra("fileName",fileName);
         i.putExtra("addressObject",addressObject);
         startActivity(i);
+        finish();
     }
 }

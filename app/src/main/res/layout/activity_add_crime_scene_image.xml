@@ -78,6 +78,19 @@
             android:text="Add Picture"
             android:background="@drawable/custom_button"
             />
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Back to Crime Details"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/custom_button"
+            android:textSize="20sp"
+
+            android:gravity="center"
+            android:textAlignment="center" />
+
     </LinearLayout>
 
 </LinearLayout>

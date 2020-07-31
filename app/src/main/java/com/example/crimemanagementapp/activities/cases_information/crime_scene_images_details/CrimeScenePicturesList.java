@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
 import com.example.crimemanagementapp.activities.criminal_and_victim_details.criminal_details.CriminalList;
 import com.example.crimemanagementapp.activities.criminal_and_victim_details.criminal_details.CriminalUpdate;
 import com.example.crimemanagementapp.api.RetrofitClient;
@@ -40,7 +41,7 @@ public class CrimeScenePicturesList extends AppCompatActivity {
     int id_list[];
     String name_list[];
     int crime_id[];
-
+    Button backButton;
     int size;
     ListView listView;
     String loggedInEmail,loggedInToken;
@@ -51,13 +52,25 @@ public class CrimeScenePicturesList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crime_scene_pictures_list);
         listView=findViewById(R.id.listView);
-
+        backButton = findViewById(R.id.backButton);
 
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
         loggedInToken= SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
 
          Intent i=getIntent();
          int crime_id_received=Integer.valueOf(i.getStringExtra("crime_id"));
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimePut.class);
+                i.putExtra("pk",crime_id_received);
+                startActivity(i);
+                finish();
+
+
+            }
+        });
         Call<CrimeScenePicturesDefaultResponse> call = RetrofitClient
                 .getInstance()
                 .getApi()
@@ -98,6 +111,7 @@ public class CrimeScenePicturesList extends AppCompatActivity {
                                     Intent i=new Intent(getApplicationContext(), CrimeSceneDetailActivity.class);
                                     i.putExtra("pk",Integer.parseInt(idET.getText().toString()));
                                     startActivity(i);
+                                    finish();
 
                                 }
                             });

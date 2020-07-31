@@ -109,6 +109,7 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                 Intent intent=new Intent(getApplicationContext(), CrimeScenePicturesList.class);
                 intent.putExtra("crime_id",crimeIDET.getText().toString());
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -120,6 +121,7 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                 Intent intent=new Intent(getApplicationContext(), AddCrimeSceneImageActivity.class);
                 intent.putExtra("crime_id",crimeIDET.getText().toString());
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -139,12 +141,14 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                     Intent intent=new Intent(getApplicationContext(), CrimeAddressRegister.class);
                     intent.putExtra("resident_id",Integer.parseInt(crimeIDET.getText().toString()));
                     intent.putExtra("fileName","CrimeAddressRegister");
-                    startActivity(intent);}else{
+                    startActivity(intent);
+                finish();}else{
 
                 Intent intent=new Intent(getApplicationContext(), CrimeAddressPut.class);
                 intent.putExtra("resident_id",Integer.parseInt(crimeIDET.getText().toString()));
                 intent.putExtra("fileName","CrimeAddressPut");
                 startActivity(intent);
+                    finish();
             }}
         });
 
@@ -157,12 +161,14 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                     intent.putExtra("resident_id",Integer.parseInt(crimeIDET.getText().toString()));
                     intent.putExtra("fileName","CrimeAddressRegister");
                     startActivity(intent);
+                    finish();
                 }else {
 
                     Intent intent = new Intent(getApplicationContext(), PermissionsActivity.class);
                     intent.putExtra("resident_id", Integer.parseInt(crimeIDET.getText().toString()));
                     intent.putExtra("fileName", "CrimeAddressPut");
                     startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -223,6 +229,7 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                 Intent intent=new Intent(getApplicationContext(), CrimeLiveUpdatePost.class);
                 intent.putExtra("crime_id",crimeIDET.getText().toString());
                 startActivity(intent);
+                finish();
 
 
             }
@@ -234,6 +241,8 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                 Intent i=new Intent(getApplicationContext(), CrimeLiveUpdateList.class);
                 i.putExtra("crime_id_para",Integer.parseInt(crimeIDET.getText().toString()));
                 startActivity(i);
+                finish();
+
             }
         });
 
@@ -299,6 +308,7 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
                         Toast.makeText(getApplicationContext(),"Successfully Deleted",Toast.LENGTH_LONG).show();
                         Intent intent1=new Intent(getApplicationContext(), CrimeList.class);
                         startActivity(intent1);
+                        finish();
 
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}

@@ -173,6 +173,7 @@ public class CrimeAddressRegister extends AppCompatActivity {
 
                               Intent i=new Intent(getApplicationContext(),CrimeList.class);
                                   startActivity(i);
+                                  finish();
                     }else{
                         Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();
                     }

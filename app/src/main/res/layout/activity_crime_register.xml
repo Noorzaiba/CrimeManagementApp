@@ -73,7 +73,7 @@
                 android:id="@+id/dateTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter date Crime occured"
+                android:hint="Tap to enter date of crime"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
                 android:id="@+id/timeTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter time Crime occured"
+                android:hint="Tap to enter crime timings"
                 android:layout_marginTop="20dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
@@ -124,7 +124,7 @@
                 android:textSize="20sp"
 
                 android:background="@drawable/custom_button"
-                android:text="Enter Address withou Map" />
+                android:text="Enter Address without Map" />
             <Button
                 android:id="@+id/addressByMapButton"
                 android:layout_width="350dp"

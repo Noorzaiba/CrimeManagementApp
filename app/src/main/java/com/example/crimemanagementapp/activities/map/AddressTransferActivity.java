@@ -45,6 +45,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -56,6 +57,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -68,6 +70,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("addressObject",addressObject);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(i);
+            finish();
 
 
         }
@@ -79,6 +82,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -90,7 +94,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
-
+            finish();
 
         }
         if(fileName.equals("CriminalAddressRegister")){
@@ -101,6 +105,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -112,6 +117,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -123,6 +129,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -135,6 +142,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -147,6 +155,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -158,6 +167,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -169,6 +179,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }
@@ -181,6 +192,7 @@ public class AddressTransferActivity extends AppCompatActivity {
             i.putExtra("fileName","AddressTransferActivity");
             i.putExtra("addressObject",addressObject);
             startActivity(i);
+            finish();
 
 
         }

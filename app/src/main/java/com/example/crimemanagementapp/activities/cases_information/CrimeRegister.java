@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -67,7 +68,6 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
         this.dateTV = findViewById(R.id.dateTV);
         this.addressByMapButton = findViewById(R.id.addressByMapButton);
         this.addressWithoutMapButton = findViewById(R.id.addressWithoutMapButton);
-
         this.investigatorET = findViewById(R.id.investigatorET);
         this.submitButton = findViewById(R.id.submitButton);
         this.addressByMapButton.setEnabled(false);
@@ -81,6 +81,7 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","CrimeAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -92,6 +93,7 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","CrimeAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
         //setting the DOB
@@ -165,42 +167,48 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
         String date = dateTV.getText().toString().trim();
         String investigatorEmail = investigatorET.getText().toString().trim();
 
-        validation(description, status, date,time, investigatorEmail);
-        posting_data(this.spinner.getSelectedItem().toString(),description,status,date,time,investigatorEmail);
+        boolean test=validation(description, status, date,time, investigatorEmail);
+        if(test==true){
+            posting_data(this.spinner.getSelectedItem().toString(),description,status,date,time,investigatorEmail);
+        }
+
+
 
     }
 
-    void validation(String descriptionL, String statusL, String date,String time,  String investigatorEmailL) {
+    boolean validation(String descriptionL, String statusL, String date,String time,  String investigatorEmailL) {
 
 
         if (descriptionL.isEmpty()) {
             descriptionET.setError("Description cannot be empty");
             descriptionET.requestFocus();
-            return;
+            return false;
         }
 
         if (statusL.isEmpty()) {
             statusET.setError("Status cannot be empty");
             statusET.requestFocus();
-            return;
+            return false;
         }
         if (date.isEmpty()) {
            dateTV.setError("Crime Occured Date cannot be empty");
             dateTV.requestFocus();
-            return;
+            Toast.makeText(CrimeRegister.this,"Crime Occured Date cannot be empty",Toast.LENGTH_LONG).show();
+            return false;
         }
         if (time.isEmpty()) {
             timeTV.setError("Crime Occured Time cannot be empty");
+            Toast.makeText(CrimeRegister.this,"Crime Occured Time cannot be empty",Toast.LENGTH_LONG).show();
            timeTV.requestFocus();
-            return;
-        }
 
-        if (investigatorEmailL.isEmpty()) {
-            investigatorET.setError("Investigator Email cannot be empty");
+            return false;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(investigatorEmailL).matches()){
+            investigatorET.setError("Invalid Email address");
             investigatorET.requestFocus();
-            return;
+            return false;
         }
-
+     return true;
     }
 
     void posting_data(String typeOfCrimeL, String descriptionL, String statusL, String dateL,String timeL,String investigatorEmailL) {

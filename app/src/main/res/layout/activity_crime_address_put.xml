@@ -34,13 +34,13 @@
 
 
 
-    <TextView
-        android:id="@+id/addressTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="30sp"
+                />
 
 
             <EditText
@@ -53,13 +53,13 @@
                 android:inputType="textPersonName"
                 android:textAlignment="center"
                 android:textSize="25sp" />
-    <TextView
-        android:id="@+id/cityTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="City"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/cityTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="30sp"
+                />
             <EditText
                 android:id="@+id/cityET"
                 android:layout_width="match_parent"
@@ -70,13 +70,13 @@
                 android:inputType="textPersonName"
                 android:textAlignment="center"
                 android:textSize="25sp" />
-    <TextView
-        android:id="@+id/stateTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="State:"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/stateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State:"
+                android:textSize="30sp"
+                />
             <EditText
                 android:id="@+id/stateET"
                 android:layout_width="match_parent"
@@ -87,13 +87,13 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:inputType="textPersonName" />
-    <TextView
-        android:id="@+id/pincodeTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pincode:"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pincode:"
+                android:textSize="30sp"
+                />
             <EditText
                 android:id="@+id/pincodeET"
                 android:layout_width="match_parent"
@@ -105,13 +105,13 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:inputType="number" />
-    <TextView
-        android:id="@+id/latitudeTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Latitude:"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/latitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude:"
+                android:textSize="30sp"
+                />
             <EditText
                 android:id="@+id/latitudeET"
                 android:layout_width="match_parent"
@@ -123,13 +123,13 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 android:inputType="numberDecimal" />
-    <TextView
-        android:id="@+id/longitudeTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Longitude:"
-        android:textSize="30sp"
-        />
+            <TextView
+                android:id="@+id/longitudeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitude:"
+                android:textSize="30sp"
+                />
 
             <EditText
                 android:id="@+id/longitudeET"
@@ -152,17 +152,27 @@
                 android:background="@drawable/custom_button"
                 android:text="Submit"/>
 
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/custom_button"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center" />
 
             <EditText
-        android:id="@+id/idET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:visibility="invisible"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textSize="25sp" />
+                android:id="@+id/idET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="25sp" />
 
         </LinearLayout>
     </ScrollView>

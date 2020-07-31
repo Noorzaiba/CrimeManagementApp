@@ -72,6 +72,7 @@ public class CrimeSceneDetailActivity extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(), CrimeScenePicturesList.class);
                 intent.putExtra("crime_id",crimeIdET.getText().toString());
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -98,6 +99,7 @@ public class CrimeSceneDetailActivity extends AppCompatActivity {
                         Intent intent=new Intent(getApplicationContext(), CrimeScenePicturesList.class);
                         intent.putExtra("crime_id",crimeIdET.getText().toString());
                         startActivity(intent);
+                        finish();
 
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}

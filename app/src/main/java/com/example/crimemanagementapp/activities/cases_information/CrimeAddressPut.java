@@ -24,7 +24,7 @@ import retrofit2.Response;
 
 public class CrimeAddressPut extends AppCompatActivity {
     private EditText addressET,cityET,stateET,pincodeET,latitudeET,longitudeET,idET;
-    private Button submitButton ;
+    private Button submitButton , backButton;
     Intent intent;
     String fileName;
     int resident_id,publicUserAddressId;
@@ -33,7 +33,7 @@ public class CrimeAddressPut extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crime_reported_address_post);
+        setContentView(R.layout.activity_crime_address_put);
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
         loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
         this.addressET=findViewById(R.id.addressET);
@@ -45,6 +45,8 @@ public class CrimeAddressPut extends AppCompatActivity {
         this.pincodeET=findViewById(R.id.pincodeET);
         this.submitButton = findViewById(R.id.submitButton);
         this.idET = findViewById(R.id.idET);
+        backButton = findViewById(R.id.backButton);
+        backButton.setText("Back to Crime Details");
         this.operationTV.setText("Update Address");
         intent=getIntent();
         fileName=intent.getStringExtra("fileName");
@@ -54,7 +56,18 @@ public class CrimeAddressPut extends AppCompatActivity {
         Log.i("TREE",String.valueOf(fileName.equals("AddressTransferActivity")));
 
 
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
 
+                Intent i=new Intent(getApplicationContext(), CrimePut.class);
+                i.putExtra("pk",resident_id);
+                startActivity(i);
+                finish();
+
+
+            }
+        });
         this.submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
