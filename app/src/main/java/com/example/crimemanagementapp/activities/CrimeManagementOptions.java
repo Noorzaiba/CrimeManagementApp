@@ -39,6 +39,7 @@ CardView criminal_register;
 CardView public_user_list;
 CardView crime_reported_list;
 CardView investigator_details_list;
+CardView logout;
 Button adminMainMenuButton;
     String loggedInEmail;
     boolean isSuperuser;
@@ -49,6 +50,7 @@ Button adminMainMenuButton;
         setContentView(R.layout.activity_crime_management_options);
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
 
+        this.logout=findViewById(R.id.logout);
         this.crime_list=findViewById(R.id.crime_list);
         this.investigator_details_list=findViewById(R.id.investigator_details_list);
         this.victim_list=findViewById(R.id.victim_list);
@@ -73,6 +75,14 @@ Button adminMainMenuButton;
             public void onClick(View v) {
                 Intent intent1=new Intent(getApplicationContext(), AdminMainMenuActivity.class);
                 startActivity(intent1);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4=new Intent(getApplicationContext(), LogoutActivity.class);
+                startActivity(intent4);
             }
         });
 
@@ -158,10 +168,7 @@ Button adminMainMenuButton;
                 Intent intent3=new Intent(getApplicationContext(), ContactUsRegisterActivity.class);
                 startActivity(intent3);
                 return true;
-            case R.id.logout:
-                Intent intent4=new Intent(getApplicationContext(), LogoutActivity.class);
-                startActivity(intent4);
-                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.criminal_and_victim_details.victim_details.VictimUpdate;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObject;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObjectDefaultResponse;
@@ -170,8 +171,12 @@ public class CriminalAddressRegister extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
 
-                        Intent i=new Intent(getApplicationContext(),CriminalList.class);
+                        Intent i=new Intent(getApplicationContext(), CriminalUpdate.class);
+                        i.putExtra("pk",obj.getResidentId());
+
                         startActivity(i);
+                        finish();
+
 
                     }else{
                         Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();

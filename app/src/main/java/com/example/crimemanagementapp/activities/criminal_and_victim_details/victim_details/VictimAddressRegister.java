@@ -170,8 +170,11 @@ public class VictimAddressRegister extends AppCompatActivity {
                         AddressObject obj=res.getSerailizedData().get(0);
 
                         Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
-Intent i=new Intent(getApplicationContext(),VictimList.class);
-startActivity(i);
+                        Intent i=new Intent(getApplicationContext(), VictimUpdate.class);
+                        i.putExtra("pk",obj.getResidentId());
+
+                     startActivity(i);
+                         finish();
                     }else{
                         Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();
                     }

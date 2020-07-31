@@ -81,5 +81,18 @@
             android:textColor="@color/white"
             android:background="@drawable/custom_button"
             />
+        <Button
+            android:width="40dp"
+            android:id="@+id/mainMenuButton"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Main Menu"
+            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            />
 </LinearLayout>
 </LinearLayout>

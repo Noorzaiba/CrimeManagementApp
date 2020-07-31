@@ -385,8 +385,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Address"
-                android:enabled="false"
-                android:inputType="textPersonName"
+
+                android:editable="false"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:textSize="25sp" />
@@ -404,8 +404,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="City"
-                android:enabled="false"
-                android:inputType="textPersonName"
+
+                android:editable="false"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:textSize="25sp" />
@@ -423,11 +423,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="State"
-                android:enabled="false"
+                android:editable="false"
                 android:textSize="25sp"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:inputType="textPersonName" />
+                />
             <TextView
                 android:id="@+id/pincodeTV"
                 android:layout_width="match_parent"
@@ -444,10 +444,10 @@
                 android:maxLength="6"
                 android:hint="Pin Code"
                 android:textSize="25sp"
-                android:enabled="false"
+                android:editable="false"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:inputType="numberDecimal" />
+               />
             <TextView
                 android:id="@+id/latitudeTV"
                 android:layout_width="match_parent"
@@ -462,11 +462,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:textSize="25sp"
-                android:enabled="false"
+
                 android:hint="Latitude"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:inputType="numberDecimal" />
+                android:editable="false" />
             <TextView
                 android:id="@+id/longitudeTV"
                 android:layout_width="match_parent"
@@ -481,11 +481,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:textSize="25sp"
-                android:enabled="false"
+              android:editable="false"
                 android:hint="Longitude"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:inputType="numberDecimal" />
+                />
 
             <Button
                 android:id="@+id/updateButton"

@@ -86,6 +86,7 @@ public class CriminalRegister extends AppCompatActivity {
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","CriminalAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -97,6 +98,7 @@ public class CriminalRegister extends AppCompatActivity {
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","CriminalAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -169,19 +171,14 @@ Log.i("num",String.valueOf(phoneNumberR.length()==1));
         }
         else{
             if(phoneNumberR.length()<10){
-                this.phoneNumberET.setError("phone number is required");
+                this.phoneNumberET.setError("phone number is required if not known add 0 dummy value");
                 this.phoneNumberET.requestFocus();
                 return false;}}
 
-        if (ageR.isEmpty())
-        {
-            ageET.setError("age is required if not known add 0 dummy value ");
-            ageET.requestFocus();
-            return false;
-        }
-        if (occupationR.isEmpty()){
-            occupationET.setError("occupation is required ,if not known add unknown  as value");
-            occupationET.requestFocus();
+
+        if (remarksR.isEmpty()){
+            remarksET.setError("Remarks cannot be empty if not known add dummy value as unknown");
+            remarksET.requestFocus();
             return false;
         }
 
@@ -197,9 +194,24 @@ Log.i("num",String.valueOf(phoneNumberR.length()==1));
         }
 
 
-        if (remarksR.isEmpty()){
-           remarksET.setError("Remarks cannot be empty if not known add dummy value as unknown");
-           remarksET.requestFocus();
+        if (occupationR.isEmpty()){
+            occupationET.setError("occupation is required ,if not known add unknown  as value");
+            occupationET.requestFocus();
+            return false;
+        }
+
+
+        if (ageR.isEmpty())
+        {
+            ageET.setError("age is required if not known add 0 dummy value ");
+            ageET.requestFocus();
+            return false;
+        }
+
+        if (ageR.length()>3)
+        {
+            ageET.setError("Age cannot have more than 3 digits ");
+            ageET.requestFocus();
             return false;
         }
 
@@ -217,8 +229,7 @@ Log.i("num",String.valueOf(phoneNumberR.length()==1));
 
 
 
-
-return true;
+        return true;
 
     }
 

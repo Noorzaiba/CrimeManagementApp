@@ -88,6 +88,7 @@ public class VictimRegister extends AppCompatActivity {  private RadioGroup gend
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","VictimAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -99,6 +100,7 @@ public class VictimRegister extends AppCompatActivity {  private RadioGroup gend
                 intent.putExtra("resident_id",id);
                 intent.putExtra("fileName","VictimAddressRegister");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -222,19 +224,14 @@ public class VictimRegister extends AppCompatActivity {  private RadioGroup gend
         }
         else{
             if(phoneNumberR.length()<10){
-                this.phoneNumberET.setError("phone number is required");
+                this.phoneNumberET.setError("phone number is required if not known add 0 dummy value");
                 this.phoneNumberET.requestFocus();
                 return false;}}
 
-        if (ageR.isEmpty())
-        {
-            ageET.setError("age is required if not known add 0 dummy value ");
-            ageET.requestFocus();
-            return false;
-        }
-        if (occupationR.isEmpty()){
-            occupationET.setError("occupation is required ,if not known add unknown  as value");
-            occupationET.requestFocus();
+
+        if (remarksR.isEmpty()){
+            remarksET.setError("Remarks cannot be empty if not known add dummy value as unknown");
+            remarksET.requestFocus();
             return false;
         }
 
@@ -250,9 +247,24 @@ public class VictimRegister extends AppCompatActivity {  private RadioGroup gend
         }
 
 
-        if (remarksR.isEmpty()){
-            remarksET.setError("Remarks cannot be empty if not known add dummy value as unknown");
-            remarksET.requestFocus();
+        if (occupationR.isEmpty()){
+            occupationET.setError("occupation is required ,if not known add unknown  as value");
+            occupationET.requestFocus();
+            return false;
+        }
+
+
+        if (ageR.isEmpty())
+        {
+            ageET.setError("age is required if not known add 0 dummy value ");
+            ageET.requestFocus();
+            return false;
+        }
+
+        if (ageR.length()>3)
+        {
+            ageET.setError("Age cannot have more than 3 digits ");
+            ageET.requestFocus();
             return false;
         }
 

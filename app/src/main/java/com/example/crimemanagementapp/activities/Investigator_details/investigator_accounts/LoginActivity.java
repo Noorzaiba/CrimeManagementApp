@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.CrimeManagementOptions;
 import com.example.crimemanagementapp.activities.EntryActivty;
+import com.example.crimemanagementapp.activities.Investigator_details.investigator_password_reset.OTPVerificationForForgotPassword;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.accounts.LoginResponse;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObject;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText emailIDET,passwordET;
 
-    Button loginButton,forgotButton;
+    Button loginButton,forgotButton,mainMenuButton;
 
 
 
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordET=findViewById(R.id.passwordET);
         loginButton=findViewById(R.id.loginButton);
         forgotButton=findViewById(R.id.forgotButton);
+        mainMenuButton=findViewById(R.id. mainMenuButton);
 
 
         this.loginButton.setOnClickListener(new View.OnClickListener(){
@@ -51,16 +53,24 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        this.forgotButton.setOnClickListener(new View.OnClickListener(){
+        this. mainMenuButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                Intent i=new Intent(getApplicationContext(), EntryActivty.class);
                startActivity(i);
+               finish();
 
             }
         });
 
+        this.forgotButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), OTPVerificationForForgotPassword.class);
+                startActivity(intent);
 
+            }
+        });
 
 
 

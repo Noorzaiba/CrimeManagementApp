@@ -171,7 +171,9 @@ public class CrimeAddressRegister extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
 
-                              Intent i=new Intent(getApplicationContext(),CrimeList.class);
+
+                        Intent i=new Intent(getApplicationContext(),CrimePut.class);
+                        i.putExtra("pk",obj.getResidentId());
                                   startActivity(i);
                                   finish();
                     }else{
