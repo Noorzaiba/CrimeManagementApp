@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
+import com.example.crimemanagementapp.activities.crime_reported_info.admin_level_crime_reported_details.CrimeReportedUpdateDetails;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.constants.ApiContants;
 import com.example.crimemanagementapp.model.crime_reported_details.CrimeReportedSceneDefaultResponse;
@@ -41,12 +43,14 @@ public class CrimeReportedSceneImageListForAdmin extends AppCompatActivity {
     ListView listView;
     String loggedInEmail,loggedInToken;
     String image_list[];
+    Button backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crime_reported_scene_image_list_for_admin2);
 
         listView=findViewById(R.id.listView);
+        backButton = findViewById(R.id.backButton);
 
 
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
@@ -58,6 +62,19 @@ public class CrimeReportedSceneImageListForAdmin extends AppCompatActivity {
                 .getInstance()
                 .getApi()
                 .crimeReportedSceneImageGetAll(loggedInEmail,crime_id_received);
+
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
+                i.putExtra("pk",crime_id_received);
+                startActivity(i);
+                finish();
+
+
+            }
+        });
 
         call.enqueue(new Callback<CrimeReportedSceneDefaultResponse>(){
             @Override
@@ -98,6 +115,7 @@ public class CrimeReportedSceneImageListForAdmin extends AppCompatActivity {
 
 
                                     startActivity(i);
+                                    finish();
 
                                 }
                             });

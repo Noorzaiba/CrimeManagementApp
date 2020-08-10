@@ -64,6 +64,7 @@ public class CrimeReportedImageDetailSceneForAdmin extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(), CrimeReportedSceneImageListForAdmin.class);
                 intent.putExtra("crime_id",crimeIdET.getText().toString());
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -90,6 +91,7 @@ public class CrimeReportedImageDetailSceneForAdmin extends AppCompatActivity {
                         Intent intent=new Intent(getApplicationContext(), CrimeReportedSceneImageListForAdmin.class);
                         intent.putExtra("crime_id",crimeIdET.getText().toString());
                         startActivity(intent);
+                        finish();
 
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}

@@ -124,6 +124,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                 Intent intent=new Intent(getApplicationContext(), CrimeReportedSceneImageListForAdmin.class);
                 intent.putExtra("crime_id",idET.getText().toString());
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -135,6 +136,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                 Intent intent4=new Intent(getApplicationContext(), AddImageCrimeReportedSceneActivity.class);
                 intent4.putExtra("crime_id",idET.getText().toString());
                 startActivity(intent4);
+                finish();
 
             }
         });
@@ -146,6 +148,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                 intent.putExtra("resident_id",Integer.parseInt(idET.getText().toString()));
                 intent.putExtra("fileName","CrimeReportedUpdateAddressDetails");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -157,6 +160,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                 intent.putExtra("resident_id",Integer.parseInt(idET.getText().toString()));
                 intent.putExtra("fileName","CrimeReportedUpdateAddressDetails");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -244,6 +248,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                         Toast.makeText(getApplicationContext(), "Deleted Successfully", Toast.LENGTH_LONG).show();
                         Intent intent7=new Intent(getApplicationContext(), CrimeReportedListForAdmin.class);
                         startActivity(intent7);
+                        finish();
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}
 
@@ -404,6 +409,10 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                                 typeOfCrimeET.setText(crimeReportedByPublicModel.getTypeOfCrime());
                                 int spinnerPosition=myAdapter.getPosition(crimeReportedByPublicModel.getTypeOfCrime());
                                 spinner.setSelection(spinnerPosition);
+                                Intent i = new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
+                                i.putExtra("pk", Integer.parseInt(idET.getText().toString()));
+                                startActivity(i);
+                                finish();
 
                             }
 

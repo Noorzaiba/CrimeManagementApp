@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
+import com.example.crimemanagementapp.activities.crime_reported_info.admin_level_crime_reported_details.CrimeReportedUpdateDetails;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.crime_reported_details.CrimeReportedSceneDefaultResponse;
 import com.example.crimemanagementapp.model.crime_reported_details.CrimeReportedScenePicturesModel;
@@ -32,7 +34,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AddImageCrimeReportedSceneActivity extends AppCompatActivity {
-    private Button registerButton;
+    private Button registerButton ,backButton;
     ImageView imageIV;
     TextView imageTV;
     private Bitmap bitmap;
@@ -49,6 +51,7 @@ public class AddImageCrimeReportedSceneActivity extends AppCompatActivity {
         imageTV=findViewById(R.id.imageTV);
         crimeIdET=findViewById(R.id.crimeIdET);
         this.registerButton=findViewById(R.id.registerButton);
+        backButton = findViewById(R.id.backButton);
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
 
         Intent i=getIntent();
@@ -56,6 +59,18 @@ public class AddImageCrimeReportedSceneActivity extends AppCompatActivity {
         crimeIdET.setText(crime_id);
 
 
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
+                i.putExtra("pk",Integer.parseInt(crime_id));
+                startActivity(i);
+                finish();
+
+
+            }
+        });
         this.registerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -168,6 +183,7 @@ public class AddImageCrimeReportedSceneActivity extends AppCompatActivity {
                                 Intent i=new Intent(getApplicationContext(), CrimeReportedImageDetailSceneForAdmin.class);
                                 i.putExtra("pk",obj.getId());
                                 startActivity(i);
+                                finish();
 
 
                             }else{

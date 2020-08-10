@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObject;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObjectDefaultResponse;
@@ -24,7 +25,7 @@ import retrofit2.Response;
 
 public class CrimeReportedUpdateAddressDetails extends AppCompatActivity {
     private EditText addressET,cityET,stateET,pincodeET,latitudeET,longitudeET,idET;
-    private Button submitButton ;
+    private Button submitButton , backButton;
     Intent intent;
     TextView operationTV;
     String fileName;
@@ -46,7 +47,8 @@ public class CrimeReportedUpdateAddressDetails extends AppCompatActivity {
         this.pincodeET=findViewById(R.id.pincodeET);
         this.submitButton = findViewById(R.id.submitButton);
         this.idET = findViewById(R.id.idET);
-
+        backButton = findViewById(R.id.backButton);
+        backButton.setText("Back to Crime Details");
         intent=getIntent();
         fileName=intent.getStringExtra("fileName");
         resident_id=intent.getIntExtra("resident_id",0);
@@ -55,6 +57,18 @@ public class CrimeReportedUpdateAddressDetails extends AppCompatActivity {
         Log.i("TREE",String.valueOf(fileName.equals("AddressTransferActivity")));
 
 
+        this.backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
+                i.putExtra("pk",resident_id);
+                startActivity(i);
+                finish();
+
+
+            }
+        });
 
         this.submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,11 +159,11 @@ public class CrimeReportedUpdateAddressDetails extends AppCompatActivity {
 
 
                                          if(res.isFlag()){
-
-                                             Intent i = new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
-                                             i.putExtra("pk", addressObjectLoaded.getResidentId());
-                                             startActivity(i);
-                                             finish();
+                                             Toast.makeText(getApplicationContext(), "Updated Successfully", Toast.LENGTH_LONG).show();
+                                           //  Intent i = new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
+                                          //   i.putExtra("pk", addressObjectLoaded.getResidentId());
+                                          //   startActivity(i);
+                                         //    finish();
                                          }else{
                                              Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                                          }
