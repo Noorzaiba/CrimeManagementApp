@@ -59,6 +59,7 @@ public class QueryDetailPublicUser extends AppCompatActivity {
             public void onClick(View v) {
                Intent i=new Intent(getApplicationContext(),QueryListPublicUser.class);
                startActivity(i);
+               finish();
 
             }
         });
@@ -84,6 +85,7 @@ public class QueryDetailPublicUser extends AppCompatActivity {
                     if(d.isFlag()) {
                         Intent i=new Intent(getApplicationContext(),QueryListPublicUser.class);
                         startActivity(i);
+                        finish();
 
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}
@@ -189,7 +191,7 @@ public class QueryDetailPublicUser extends AppCompatActivity {
                             if(res.isFlag()){
                                 List<InvestigatorContactUsModel>  obj_list=  res.getSerailizedData();
                                 InvestigatorContactUsModel obj=obj_list.get(0);
-                                Toast.makeText(getApplicationContext(),obj.getStatus(),Toast.LENGTH_LONG).show();
+                               // Toast.makeText(getApplicationContext(),obj.getStatus(),Toast.LENGTH_LONG).show();
                                 if("Invalid Email Id".equals(obj.getDescription())){
                                     Toast.makeText(getApplicationContext(),"Email id does not exists ",Toast.LENGTH_LONG).show();
                                 }else{

@@ -149,6 +149,7 @@ public class CrimeReportedUpdateAddressDetails extends AppCompatActivity {
                                              Intent i = new Intent(getApplicationContext(), CrimeReportedUpdateDetails.class);
                                              i.putExtra("pk", addressObjectLoaded.getResidentId());
                                              startActivity(i);
+                                             finish();
                                          }else{
                                              Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                                          }

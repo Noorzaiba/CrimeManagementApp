@@ -55,8 +55,9 @@ public class QueryDetailInvestigator extends AppCompatActivity {
         this.backButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), QueryListPublicUser.class);
-                startActivity(i);
+                Intent i=new Intent(getApplicationContext(), QueryListInvesitgator.class);
+               startActivity(i);
+                finish();
 
             }
         });
@@ -206,8 +207,9 @@ public class QueryDetailInvestigator extends AppCompatActivity {
                 if (response.code() == 200) {
                     DeleteObject d=response.body();
                     if(d.isFlag()) {
-                        Intent i=new Intent(getApplicationContext(),QueryListInvesitgator.class);
+                       Intent i=new Intent(getApplicationContext(),QueryListInvesitgator.class);
                         startActivity(i);
+                        finish();
 
                     }
                     else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}

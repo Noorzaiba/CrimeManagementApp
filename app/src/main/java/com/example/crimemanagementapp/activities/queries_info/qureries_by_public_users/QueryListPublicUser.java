@@ -76,6 +76,7 @@ public class QueryListPublicUser extends AppCompatActivity {
                                     Intent i = new Intent(getApplicationContext(), QueryDetailPublicUser.class);
                                     i.putExtra("pk", Integer.parseInt(idET.getText().toString()));
                                     startActivity(i);
+                                    finish();
 
                                 }
                             });

@@ -77,6 +77,7 @@ public class QueryListInvesitgator extends AppCompatActivity {
                                     Intent i = new Intent(getApplicationContext(), QueryDetailInvestigator.class);
                                     i.putExtra("pk", Integer.parseInt(idET.getText().toString()));
                                     startActivity(i);
+                                    finish();
 
                                 }
                             });
