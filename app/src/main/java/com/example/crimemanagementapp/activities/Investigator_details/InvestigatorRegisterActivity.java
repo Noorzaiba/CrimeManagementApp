@@ -310,7 +310,7 @@ private boolean validation(String firstNameR,String lastNameR,String emailIdR,St
                             Toast.makeText(InvestigatorRegisterActivity.this,obj.getEmail_id(),Toast.LENGTH_LONG).show();
 
                             if(obj.getEmail_id().equals("noInternet@gmail.com")){
-
+                                Toast.makeText(InvestigatorRegisterActivity.this,"Server Down",Toast.LENGTH_LONG).show();
                             }else{
                                 id=obj.getId();
                                 registerButton.setEnabled(false);

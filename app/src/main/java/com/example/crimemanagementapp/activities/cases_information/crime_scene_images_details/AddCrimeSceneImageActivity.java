@@ -185,8 +185,6 @@ public class AddCrimeSceneImageActivity extends AppCompatActivity {
                             i.putExtra("pk",obj.getId());
                             startActivity(i);
                             finish();
-
-
                         }else{
                            Toast.makeText(getApplicationContext(),"Unsuccessfull",Toast.LENGTH_LONG).show(); }
 

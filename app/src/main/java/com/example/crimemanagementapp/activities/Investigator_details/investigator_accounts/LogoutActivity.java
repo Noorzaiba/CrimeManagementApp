@@ -21,7 +21,7 @@ public class LogoutActivity extends AppCompatActivity {
         Log.i("checking", String.valueOf(SharedPrefManager.getInstance(getApplicationContext()).isLogIn()));
         SharedPrefManager.getInstance(getApplicationContext())
                 .clear();
-        Toast.makeText(getApplicationContext(), "successfull logout", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(), "successfull logout", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(getApplicationContext(), EntryActivty.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

@@ -6,6 +6,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,12 +22,14 @@ import retrofit2.Response;
 
 public class OTPVerificationForForgotPassword extends AppCompatActivity {
     private EditText emailIdET,otpET;
+    private TextView msgTV;
     private Button emailSubmitButton,otpSubmitButton,resetSubmitButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password_reset);
         emailIdET = findViewById(R.id.emailIdET);
         otpET = findViewById(R.id.otpET);
+        msgTV = findViewById(R.id.msgTV);
         emailSubmitButton = findViewById(R.id.emailSubmitButton);
         otpSubmitButton = findViewById(R.id.otpSubmitButton);
         resetSubmitButton= findViewById(R.id. resetSubmitButton);
@@ -37,6 +40,7 @@ public class OTPVerificationForForgotPassword extends AppCompatActivity {
         resetSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                msgTV.setText("Request Processing");
                 emailIdET.setEnabled(true);
                 emailSubmitButton.setEnabled(true);
                 otpET.setText("");
@@ -93,6 +97,8 @@ public class OTPVerificationForForgotPassword extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),obj.getMessage(),Toast.LENGTH_LONG).show();
                         resetSubmitButton.setEnabled(true);
+                        msgTV.setText("Invalid OTP Entered");
+                        otpSubmitButton.setEnabled(false);
                     }
                         }else{
 
@@ -131,12 +137,14 @@ private void forgotPassword(){
                     if(obj.isFlag()){
                         Toast.makeText(getApplicationContext(),obj.getMessage(),Toast.LENGTH_LONG).show();
                         emailIdET.setEnabled(false);
+                        msgTV.setText("Check your Email For OTP");
                         emailSubmitButton.setEnabled(false);
                         otpET.setEnabled(true);
                         otpSubmitButton.setEnabled(true);
 
                     }else{
                         Toast.makeText(getApplicationContext(),obj.getMessage(),Toast.LENGTH_LONG).show();
+                        msgTV.setText("Error Occured While Generating OTP");
                     }
                         }else{
 

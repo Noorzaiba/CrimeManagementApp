@@ -153,6 +153,7 @@ public class OTPVerficationForPasswordReset extends AppCompatActivity {
                         otpET.requestFocus();
                     }else{
                         Toast.makeText(getApplicationContext(),obj.getMessage(),Toast.LENGTH_LONG).show();
+
                         msgTV.setText("Error Occured While Generating OTP Please Try after sometime");
                     }
                         }else{
