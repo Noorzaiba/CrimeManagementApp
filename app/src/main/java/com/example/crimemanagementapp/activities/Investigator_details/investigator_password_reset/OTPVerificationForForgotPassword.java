@@ -73,7 +73,6 @@ public class OTPVerificationForForgotPassword extends AppCompatActivity {
         String otp = otpET.getText().toString();
         boolean test = validationForOTP(otp);
         if (test == true) {
-
             PasswordResetModel obj=new PasswordResetModel(emailIdET.getText().toString(),otp,false);
             Call<PasswordResetModel> call = RetrofitClient
                     .getInstance()
