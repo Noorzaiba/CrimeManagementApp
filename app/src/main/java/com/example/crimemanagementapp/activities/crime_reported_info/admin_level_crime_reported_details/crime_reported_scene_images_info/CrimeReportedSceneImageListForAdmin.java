@@ -48,11 +48,8 @@ public class CrimeReportedSceneImageListForAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crime_reported_scene_image_list_for_admin2);
-
         listView=findViewById(R.id.listView);
         backButton = findViewById(R.id.backButton);
-
-
         loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
 
 
@@ -123,7 +120,7 @@ public class CrimeReportedSceneImageListForAdmin extends AppCompatActivity {
 
 
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj_list.get(0).getId()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj_list.get(0).getId()),Toast.LENGTH_LONG).show();
                         }else{
                             Toast.makeText(getApplicationContext(),"No records Found",Toast.LENGTH_LONG).show();
                         }

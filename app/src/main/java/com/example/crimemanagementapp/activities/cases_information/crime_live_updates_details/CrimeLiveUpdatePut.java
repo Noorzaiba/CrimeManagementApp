@@ -108,7 +108,7 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     }else{
-                        Toast.makeText(CrimeLiveUpdatePut.this,"Some error occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrimeLiveUpdatePut.this," Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(CrimeLiveUpdatePut.this,"Authentication Error",Toast.LENGTH_LONG).show();
@@ -162,7 +162,8 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
                             douET.setText(crimeLiveUpdationModelResponse.getDou());
 
 
-                        }else{Toast.makeText(CrimeLiveUpdatePut.this,"you",Toast.LENGTH_LONG).show();}
+                        }else{
+                            Toast.makeText(CrimeLiveUpdatePut.this,"Error Occured",Toast.LENGTH_LONG).show();}
 
                     }else{
                         Toast.makeText(CrimeLiveUpdatePut.this,"Authentication Error",Toast.LENGTH_LONG).show();

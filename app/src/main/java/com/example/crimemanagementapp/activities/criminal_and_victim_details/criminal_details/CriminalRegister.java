@@ -335,7 +335,7 @@ Log.i("num",String.valueOf(phoneNumberR.length()==1));
                                     addressByMapButton.setEnabled(true);
                                     addressWithoutMapButton.setEnabled(true);
 
-                                    Toast.makeText(getApplicationContext(),String.valueOf(obj.getId())+"gvv",Toast.LENGTH_LONG).show();
+                                  //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId())+"gvv",Toast.LENGTH_LONG).show();
                                 }
 
 

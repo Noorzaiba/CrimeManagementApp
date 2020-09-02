@@ -123,7 +123,7 @@ public class CrimeLiveUpdatePost extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     }else{
-                        Toast.makeText(CrimeLiveUpdatePost.this,"error occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrimeLiveUpdatePost.this,"Error Occured",Toast.LENGTH_LONG).show();
                     }
 
 
@@ -132,12 +132,12 @@ public class CrimeLiveUpdatePost extends AppCompatActivity {
                   }else{
                       Toast.makeText(getApplicationContext(),"Authentication Error",Toast.LENGTH_LONG).show();
                   }
-              }catch (Exception e){  Toast.makeText(CrimeLiveUpdatePost.this,e.getMessage()+"djfkj",Toast.LENGTH_LONG).show(); }
+              }catch (Exception e){  Toast.makeText(CrimeLiveUpdatePost.this,e.getMessage(),Toast.LENGTH_LONG).show(); }
           }
 
           @Override
           public void onFailure(Call<CrimeDefaultResponse> call, Throwable t) {
-              Toast.makeText(CrimeLiveUpdatePost.this,t.getMessage()+"djfkj",Toast.LENGTH_LONG).show();
+              Toast.makeText(CrimeLiveUpdatePost.this,t.getMessage(),Toast.LENGTH_LONG).show();
           }
       });
 

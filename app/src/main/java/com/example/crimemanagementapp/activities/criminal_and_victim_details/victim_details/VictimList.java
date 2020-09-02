@@ -98,7 +98,7 @@ public class VictimList extends AppCompatActivity {
 
 
 
-                            Toast.makeText(VictimList.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
+                           // Toast.makeText(VictimList.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
                         }else{
                             Toast.makeText(VictimList.this,"No records Found",Toast.LENGTH_LONG).show();
                         }

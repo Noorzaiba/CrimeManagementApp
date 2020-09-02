@@ -73,7 +73,7 @@ public class CrimeList extends AppCompatActivity {
                 }
 
                 Log.i("list",String.valueOf(crime_list.size()));
-             Toast.makeText(CrimeList.this,crime_list.get(0).getTypeOfCrime(),Toast.LENGTH_LONG).show();
+            // Toast.makeText(CrimeList.this,crime_list.get(0).getTypeOfCrime(),Toast.LENGTH_LONG).show();
 
                 CustomAdapter customAdapter=new CustomAdapter();
                 listView.setAdapter(customAdapter);
@@ -97,7 +97,7 @@ public class CrimeList extends AppCompatActivity {
 
 
     }else{
-        Toast.makeText(CrimeList.this,"Authentication occured",Toast.LENGTH_LONG).show();
+        Toast.makeText(CrimeList.this,"Authentication Error",Toast.LENGTH_LONG).show();
 
     }
        }catch(Exception e){

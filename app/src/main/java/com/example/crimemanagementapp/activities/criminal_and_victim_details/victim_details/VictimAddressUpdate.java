@@ -142,11 +142,11 @@ public class VictimAddressUpdate extends AppCompatActivity {
                                          latitudeET.setText(String.valueOf(addressObjectLoaded.getLongitude()));
 
 
-                                         Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                                   //      Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                                          if(res.isFlag()){
 
                                          }else{
-                                             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                                             Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                                          }
 
                                      }else{
@@ -182,10 +182,10 @@ public class VictimAddressUpdate extends AppCompatActivity {
                     if(200==response.code()) {
 
                         AddressObjectDefaultResponse res= response.body();
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
                             AddressObject   obj= res.getSerailizedData().get(0);
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             Log.i("in above ",String.valueOf(fileName.equals("AddressTransferActivity")));
                             idET.setText(String.valueOf(obj.getId()));
                             if(fileName.equals("AddressTransferActivity")){
@@ -210,10 +210,10 @@ public class VictimAddressUpdate extends AppCompatActivity {
 
 
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

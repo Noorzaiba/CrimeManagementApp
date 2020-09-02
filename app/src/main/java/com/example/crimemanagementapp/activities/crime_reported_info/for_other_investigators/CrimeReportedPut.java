@@ -108,7 +108,7 @@ EditText idAddressET,addressET,cityET,stateET,pincodeET,latitudeET,longitudeET,d
                     if(200==response.code()) {
                         CrimeReportedDefaultResponse res = response.body();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
                             List<CrimeReportedByPublicModel> obj_list = res.getSerialized_data_crime_reported();
                             CrimeReportedByPublicModel obj=obj_list.get(0);
                             String id=String.valueOf(obj.getId());
@@ -121,7 +121,7 @@ EditText idAddressET,addressET,cityET,stateET,pincodeET,latitudeET,longitudeET,d
                             docET.setText(obj.getDoc());
                             douET.setText(obj.getDou());
                             typeOfCrimeET.setText(obj.getTypeOfCrime());
-                            Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
+                      //      Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
                             getCrimeReportedAddress(obj.getId());
                         }else{
                             Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
@@ -186,7 +186,7 @@ EditText idAddressET,addressET,cityET,stateET,pincodeET,latitudeET,longitudeET,d
                           List<CrimeReportedByPublicModel>  obj_list=  res.getSerialized_data_crime_reported();
                           CrimeReportedByPublicModel crimeReportedByPublicModel=obj_list.get(0);
 
-                          Toast.makeText(getApplicationContext(),crimeReportedByPublicModel.getStatus(),Toast.LENGTH_LONG).show();
+                      //    Toast.makeText(getApplicationContext(),crimeReportedByPublicModel.getStatus(),Toast.LENGTH_LONG).show();
                           if("userDoesExists@gmail.com".equals(crimeReportedByPublicModel.getDescription())){
                               Toast.makeText(getApplicationContext(),"Invalid user email id",Toast.LENGTH_LONG).show();
                           }else{

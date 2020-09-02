@@ -169,7 +169,7 @@ public class CrimeAddressRegister extends AppCompatActivity {
                         AddressObjectDefaultResponse res=response.body();
                         AddressObject obj=res.getSerailizedData().get(0);
 
-                        Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
 
 
                         Intent i=new Intent(getApplicationContext(),CrimePut.class);
@@ -177,7 +177,7 @@ public class CrimeAddressRegister extends AppCompatActivity {
                                   startActivity(i);
                                   finish();
                     }else{
-                        Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show(); }

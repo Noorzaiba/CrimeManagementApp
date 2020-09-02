@@ -137,11 +137,11 @@ public class CrimeSceneDetailActivity extends AppCompatActivity {
 
                     if(200==response.code()){
                         CrimeScenePicturesDefaultResponse res=response.body();
-                        Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
 
                         if(res.isFlag()){
                             CrimeScenePicturesModel obj=res.getSerialized_data().get(0);
-                            Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
                             Picasso.get()
                                     .load(ApiContants.CRIME+obj.getImage_name())
                                     .resize(50, 50)

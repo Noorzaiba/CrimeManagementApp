@@ -395,7 +395,7 @@ void deleteCriminalRecord(){
 
 
                             }else{
-                                Toast.makeText(CriminalUpdate.this,"Some error Occured",Toast.LENGTH_LONG).show();
+                                Toast.makeText(CriminalUpdate.this," Error Occured",Toast.LENGTH_LONG).show();
                             }
                         }else{
                             Toast.makeText(CriminalUpdate.this,"Authentication Error",Toast.LENGTH_LONG).show();
@@ -437,7 +437,7 @@ void deleteCriminalRecord(){
                         VictimCriminalDefaultResponse res=response.body();
                         if(res.isFlag()){
                             List<VictimCriminalRegisterModel> victimCriminalRegisterModelList=res.getVictimCriminalRegisterModelList();
-                            Toast.makeText(CriminalUpdate.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(CriminalUpdate.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
                             criminal_id=victimCriminalRegisterModelList.get(0).getId();
                             idET.setText(String.valueOf(victimCriminalRegisterModelList.get(0).getId()));
                             docET.setText(victimCriminalRegisterModelList.get(0).getDoc());
@@ -468,7 +468,7 @@ void deleteCriminalRecord(){
                         }else{
 
 
-                            Toast.makeText(CriminalUpdate.this,"Some error Occured",Toast.LENGTH_LONG).show();
+                            Toast.makeText(CriminalUpdate.this,"Error Occured",Toast.LENGTH_LONG).show();
 
                         }
 
@@ -579,11 +579,11 @@ void deleteCriminalRecord(){
 
                         AddressObjectDefaultResponse res= response.body();
 
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                    //    Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         AddressObject   obj= res.getSerailizedData().get(0);
                         if(res.isFlag()){
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             idAddressET.setText(String.valueOf(obj.getId()));
                                 addressET.setText(obj.getLocation());
                                 cityET.setText(obj.getCity());
@@ -591,11 +591,11 @@ void deleteCriminalRecord(){
                                 pincodeET.setText(String.valueOf(obj.getZipCode()));
                                 longitudeET.setText(String.valueOf(obj.getLongitude()));
                                 latitudeET.setText(String.valueOf(obj.getLongitude()));
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
                             addressET.setText(obj.getLocation());
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

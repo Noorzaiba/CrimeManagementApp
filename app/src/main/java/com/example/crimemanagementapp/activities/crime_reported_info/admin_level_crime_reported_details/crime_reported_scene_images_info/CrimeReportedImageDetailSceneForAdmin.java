@@ -88,6 +88,7 @@ public class CrimeReportedImageDetailSceneForAdmin extends AppCompatActivity {
                 if (response.code() == 200) {
                     DeleteObject d=response.body();
                     if(d.isFlag()) {
+                        Toast.makeText(getApplicationContext(),"Successfully Deleted",Toast.LENGTH_LONG).show();
                         Intent intent=new Intent(getApplicationContext(), CrimeReportedSceneImageListForAdmin.class);
                         intent.putExtra("crime_id",crimeIdET.getText().toString());
                         startActivity(intent);
@@ -132,11 +133,11 @@ public class CrimeReportedImageDetailSceneForAdmin extends AppCompatActivity {
 
                 if(200==response.code()){
                     CrimeReportedSceneDefaultResponse res=response.body();
-                    Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
 
                     if(res.isFlag()){
                         CrimeReportedScenePicturesModel obj=res.getSerialized_data().get(0);
-                        Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
                         Picasso.get()
                                 .load(ApiContants.CRIME_REPORTED_SECENE_IMAGES+obj.getImage_name())
                                 .resize(50, 50)
@@ -146,7 +147,7 @@ public class CrimeReportedImageDetailSceneForAdmin extends AppCompatActivity {
                         imageNameET.setText(obj.getImage_name());
 
                     }else{
-                        Toast.makeText(getApplicationContext(),"Error Error",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }else{
 

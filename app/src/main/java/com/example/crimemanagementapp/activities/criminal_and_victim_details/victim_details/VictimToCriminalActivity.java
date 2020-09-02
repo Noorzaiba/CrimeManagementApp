@@ -67,16 +67,16 @@ public class VictimToCriminalActivity extends AppCompatActivity {
                         if(res.isFlag()){
 
                             List<VictimCriminalRegisterModel> victimCriminalRegisterModelList=res.getVictimCriminalRegisterModelList();
-                            Toast.makeText(getApplicationContext(),String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
                             getVictimAddress(Integer.valueOf(victimCriminalRegisterModelList.get(0).getId()));
                         }else{
-                            Toast.makeText(getApplicationContext(),"error Occured1",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                         }
 
 
 
                     }else{
-                        Toast.makeText(getApplicationContext(),"error Occured2",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Authentication Error",Toast.LENGTH_LONG).show();
                     }
 
                 }catch (Exception e){
@@ -201,11 +201,11 @@ public class VictimToCriminalActivity extends AppCompatActivity {
                         AddressObjectDefaultResponse res=response.body();
                         AddressObject obj=res.getSerailizedData().get(0);
                         victimDelete(newCriminalId);
-                        Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
 
 
                     }else{
-                        Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show(); }
@@ -246,7 +246,7 @@ public class VictimToCriminalActivity extends AppCompatActivity {
                         }else{
 
 
-                            Toast.makeText(getApplicationContext(),"Some error Occured",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
 
                         }
 
@@ -281,16 +281,16 @@ public class VictimToCriminalActivity extends AppCompatActivity {
                     if(200==response.code()) {
 
                         AddressObjectDefaultResponse res= response.body();
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
                             AddressObject   obj= res.getSerailizedData().get(0);
                             registerVictimAddressToCriminalAddress(obj,newCriminalId);
 
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

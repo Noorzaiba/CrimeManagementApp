@@ -64,7 +64,7 @@
 
                 }
             });
-            Toast.makeText(CrimeLiveUpdateList.this, String.valueOf(pk), Toast.LENGTH_LONG).show();
+          //  Toast.makeText(CrimeLiveUpdateList.this, String.valueOf(pk), Toast.LENGTH_LONG).show();
             Call<CrimeDefaultResponse> call = RetrofitClient
                     .getInstance()
                     .getApi()
@@ -150,14 +150,14 @@
 
 
         else {
-            Toast.makeText(CrimeLiveUpdateList.this, "error occured", Toast.LENGTH_LONG).show();
+            Toast.makeText(CrimeLiveUpdateList.this, "Error Occured", Toast.LENGTH_LONG).show();
 
         }
 
 
     } catch (Exception e) {
 
-        Toast.makeText(CrimeLiveUpdateList.this, "l "+e.getMessage() + " L", Toast.LENGTH_LONG).show();
+        Toast.makeText(CrimeLiveUpdateList.this, e.getMessage() , Toast.LENGTH_LONG).show();
 
     }
                              }

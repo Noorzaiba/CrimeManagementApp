@@ -390,7 +390,7 @@ public class VictimUpdate extends AppCompatActivity {
                                 }
 
                             }else{
-                                Toast.makeText(VictimUpdate.this,"Some error Occured",Toast.LENGTH_LONG).show();
+                                Toast.makeText(VictimUpdate.this," Error Occured",Toast.LENGTH_LONG).show();
                             }
                         }else{
                             Toast.makeText(VictimUpdate.this,"Authentication Error",Toast.LENGTH_LONG).show();
@@ -432,7 +432,7 @@ public class VictimUpdate extends AppCompatActivity {
                         VictimCriminalDefaultResponse res=response.body();
                         if(res.isFlag()){
                             List<VictimCriminalRegisterModel> victimCriminalRegisterModelList=res.getVictimCriminalRegisterModelList();
-                            Toast.makeText(VictimUpdate.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(VictimUpdate.this,String.valueOf(victimCriminalRegisterModelList.get(0).getId()),Toast.LENGTH_LONG).show();
                             idET.setText(String.valueOf(victimCriminalRegisterModelList.get(0).getId()));
 
                             victim_id=victimCriminalRegisterModelList.get(0).getId();
@@ -464,7 +464,7 @@ public class VictimUpdate extends AppCompatActivity {
                         }else{
 
 
-                            Toast.makeText(VictimUpdate.this,"Some error Occured",Toast.LENGTH_LONG).show();
+                            Toast.makeText(VictimUpdate.this,"Error Occured",Toast.LENGTH_LONG).show();
 
                         }
 
@@ -602,7 +602,7 @@ public class VictimUpdate extends AppCompatActivity {
                     if(200==response.code()) {
 
                         AddressObjectDefaultResponse res= response.body();
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         AddressObject   obj= res.getSerailizedData().get(0);
                         if(res.isFlag()){
 
@@ -618,11 +618,11 @@ public class VictimUpdate extends AppCompatActivity {
 
 
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                        //    Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
                             addressET.setText(obj.getLocation());
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
 
                         }
 

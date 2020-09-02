@@ -245,7 +245,7 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
                             List<CrimeRegisterModel> obj_list = res.getSerialized_data_crime_register();
                             CrimeRegisterModel crimeRegisterModelResponse=obj_list.get(0);
 
-                            Toast.makeText(CrimeRegister.this,crimeRegisterModelResponse.getDescription(),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(CrimeRegister.this,crimeRegisterModelResponse.getDescription(),Toast.LENGTH_LONG).show();
                             if("Invalid Investigator id".equals(crimeRegisterModelResponse.getDescription())){
 
                             }else{
@@ -258,12 +258,12 @@ public class CrimeRegister extends AppCompatActivity implements TimePickerDialog
                             }
 
                         }else{
-                            Toast.makeText(CrimeRegister.this,"error Occured",Toast.LENGTH_LONG).show();
+                            Toast.makeText(CrimeRegister.this,"Error Occured",Toast.LENGTH_LONG).show();
                         }
 
 
                     }else{
-                        Toast.makeText(CrimeRegister.this,"error Occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrimeRegister.this,"Authentication Error",Toast.LENGTH_LONG).show();
                     }
                 }catch (Exception e){  Toast.makeText(CrimeRegister.this,e.getMessage(),Toast.LENGTH_LONG).show(); }
             }

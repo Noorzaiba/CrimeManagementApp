@@ -174,13 +174,13 @@ public class AddCrimeSceneImageActivity extends AppCompatActivity {
 
                     if(200==response.code()){
                         CrimeScenePicturesDefaultResponse res=response.body();
-                        Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
 
                         if(res.isFlag()){
                             CrimeScenePicturesModel obj=res.getSerialized_data().get(0);
-                            Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
                         if(crimeIdET.getText().toString().equals(obj.getCrime_id())){
-                           Toast.makeText(getApplicationContext(),"successfull",Toast.LENGTH_LONG).show();
+                           Toast.makeText(getApplicationContext(),"Successfully Uploaded",Toast.LENGTH_LONG).show();
                             Intent i=new Intent(getApplicationContext(), CrimeSceneDetailActivity.class);
                             i.putExtra("pk",obj.getId());
                             startActivity(i);
@@ -189,7 +189,7 @@ public class AddCrimeSceneImageActivity extends AppCompatActivity {
                            Toast.makeText(getApplicationContext(),"Unsuccessfull",Toast.LENGTH_LONG).show(); }
 
                         }else{
-                            Toast.makeText(getApplicationContext(),"Error Error",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext()," Error Occured",Toast.LENGTH_LONG).show();
                         }
                     }else{
 

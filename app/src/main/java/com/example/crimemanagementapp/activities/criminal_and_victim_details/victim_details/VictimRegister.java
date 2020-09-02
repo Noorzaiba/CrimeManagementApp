@@ -338,18 +338,18 @@ public class VictimRegister extends AppCompatActivity {  private RadioGroup gend
                                 addressByMapButton.setEnabled(true);
                                 addressWithoutMapButton.setEnabled(true);
 
-                                Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
+                             //   Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
                             }
 
 
                             }else{
-                                Toast.makeText(getApplicationContext(),"error Occured1",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                             }
 
 
 
                         }else{
-                            Toast.makeText(getApplicationContext(),"error Occured2",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Authentication Error",Toast.LENGTH_LONG).show();
                         }
 
                     }catch (Exception e){

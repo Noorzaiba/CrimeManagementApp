@@ -89,11 +89,11 @@ public class CrimeReportedSceneImagesDetailActivity extends AppCompatActivity {
 
                 if(200==response.code()){
                     CrimeReportedSceneDefaultResponse res=response.body();
-                    Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
 
                     if(res.isFlag()){
                         CrimeReportedScenePicturesModel obj=res.getSerialized_data().get(0);
-                        Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(),obj.getImage_name(),Toast.LENGTH_LONG).show();
                         Picasso.get()
                                 .load(ApiContants.CRIME_REPORTED_SECENE_IMAGES+obj.getImage_name())
                                 .resize(50, 50)
@@ -103,7 +103,7 @@ public class CrimeReportedSceneImagesDetailActivity extends AppCompatActivity {
                         imageNameET.setText(obj.getImage_name());
 
                     }else{
-                        Toast.makeText(getApplicationContext(),"Error Error",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext()," Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }else{
 

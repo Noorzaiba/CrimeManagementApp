@@ -398,7 +398,7 @@ void deleteCrimeAddress(){
 
                             List<CrimeRegisterModel> obj_list = res.getSerialized_data_crime_register();
                             CrimeRegisterModel crimeRegisterModelResponse=obj_list.get(0);
-                            crimeRegisterModelResponse.getDescription();
+                           // crimeRegisterModelResponse.getDescription();
 
                             if("Invalid Investigator id".equals(crimeRegisterModelResponse.getDescription())){
                                 Toast.makeText(getApplicationContext(),"Invalid Investigator id",Toast.LENGTH_LONG).show();
@@ -448,7 +448,7 @@ Log.i("in g",String.valueOf(pk));
                     if(200==response.code()) {
                         CrimeDefaultResponse res = response.body();
                         if(res.isFlag()){
-                            Toast.makeText(CrimePut.this,String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(CrimePut.this,String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
                             List<CrimeRegisterModel> obj_list = res.getSerialized_data_crime_register();
                             CrimeRegisterModel crimeRegisterModelResponse=obj_list.get(0);
                             descriptionET.setText(crimeRegisterModelResponse.getDescription());
@@ -468,7 +468,7 @@ Log.i("in g",String.valueOf(pk));
                             spinner.setSelection(spinnerPosition);
 
 
-                            Toast.makeText(CrimePut.this,crimeRegisterModelResponse.getDescription(),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(CrimePut.this,crimeRegisterModelResponse.getDescription(),Toast.LENGTH_LONG).show();
 
 
                     }}
@@ -539,11 +539,11 @@ Log.i("in g",String.valueOf(pk));
                     if(200==response.code()) {
 
                         AddressObjectDefaultResponse res= response.body();
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         AddressObject obj= res.getSerailizedData().get(0);
                         if(res.isFlag()){
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                        //    Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                                 idAddressET.setText(String.valueOf(obj.getId()));
                                 addressET.setText(obj.getLocation());
@@ -554,11 +554,11 @@ Log.i("in g",String.valueOf(pk));
                                 latitudeET.setText(String.valueOf(obj.getLongitude()));
 
 
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                      //      Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
                             addressET.setText(obj.getLocation());
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

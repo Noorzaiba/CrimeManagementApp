@@ -319,7 +319,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                     if(200==response.code()) {
                         CrimeReportedDefaultResponse res = response.body();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
                             List<CrimeReportedByPublicModel> obj_list = res.getSerialized_data_crime_reported();
                             CrimeReportedByPublicModel obj=obj_list.get(0);
                             String id=String.valueOf(obj.getId());
@@ -335,7 +335,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                             int spinnerPosition=myAdapter.getPosition(obj.getTypeOfCrime());
                             spinner.setSelection(spinnerPosition);
 
-                            Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
+                         //   Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
                             getCrimeReportedAddress(obj.getId());
                         }else{
                             Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
@@ -400,7 +400,7 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                             List<CrimeReportedByPublicModel>  obj_list=  res.getSerialized_data_crime_reported();
                             CrimeReportedByPublicModel crimeReportedByPublicModel=obj_list.get(0);
 
-                            Toast.makeText(getApplicationContext(),crimeReportedByPublicModel.getStatus(),Toast.LENGTH_LONG).show();
+                      //      Toast.makeText(getApplicationContext(),crimeReportedByPublicModel.getStatus(),Toast.LENGTH_LONG).show();
                             if("userDoesExists@gmail.com".equals(crimeReportedByPublicModel.getDescription())){
                                 Toast.makeText(getApplicationContext(),"Invalid user email id",Toast.LENGTH_LONG).show();
                             }else{
@@ -467,10 +467,10 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                     if(200==response.code()) {
 
                         AddressObjectDefaultResponse res= response.body();
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
                             AddressObject obj= res.getSerailizedData().get(0);
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             idAddressET.setText(String.valueOf(obj.getId()));
                             addressET.setText(obj.getLocation());
                             cityET.setText(obj.getCity());
@@ -478,10 +478,10 @@ public class CrimeReportedUpdateDetails extends AppCompatActivity implements Tim
                             pincodeET.setText(String.valueOf(obj.getZipCode()));
                             longitudeET.setText(String.valueOf(obj.getLongitude()));
                             latitudeET.setText(String.valueOf(obj.getLongitude()));
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
 
                         }else{
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "  Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{
