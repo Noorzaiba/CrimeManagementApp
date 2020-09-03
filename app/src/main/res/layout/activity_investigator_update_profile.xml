@@ -23,7 +23,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Investigator Profile"
+                android:text="My Profile"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:textSize="30sp"
