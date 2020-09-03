@@ -505,6 +505,7 @@ public class UpdatePublicUserProfile extends AppCompatActivity {
                                     Intent i = new Intent(getApplicationContext(), UpdatePublicUserProfile.class);
                                     i.putExtra("email",obj.getEmail_id());
                                     startActivity(i);
+                                    finish();
                                 }else{
                                     Toast.makeText(UpdatePublicUserProfile.this, "Unsuccessfull", Toast.LENGTH_LONG).show();
                                     Toast.makeText(UpdatePublicUserProfile.this, obj.getEmail_id(), Toast.LENGTH_LONG).show();

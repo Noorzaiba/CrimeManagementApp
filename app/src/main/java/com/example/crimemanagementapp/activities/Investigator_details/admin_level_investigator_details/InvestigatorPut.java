@@ -249,7 +249,7 @@ if(id.equals("null")){
         this.updateProfile.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"you can update Phone Number,Aadhaar Number and Address fields",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Be carefull while updating the details ",Toast.LENGTH_LONG).show();
                 phoneNumberET.requestFocus();
 
             }
