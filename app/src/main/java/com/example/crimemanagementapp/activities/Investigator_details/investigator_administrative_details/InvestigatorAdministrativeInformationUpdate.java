@@ -93,7 +93,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
                             if(responseObject.isFlag()){
                                 List<InvestigatorAdministrativeInformationModel> investigatorAdministrativeInformationModels=responseObject.getSerailizedData();
                                 InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModels.get(0);
-                                Toast.makeText(InvestigatorAdministrativeInformationUpdate.this,String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
+                              //  Toast.makeText(InvestigatorAdministrativeInformationUpdate.this,String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
                                 String id=String.valueOf(obj.getId());
                                 String salary=String.valueOf(obj.getSalary());
                                 idET.setText(id);
@@ -155,7 +155,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
                         if(response.code()==200){
 
                             InvestigatorDefaultResponse responseObject=response.body();
-                            Toast.makeText(InvestigatorAdministrativeInformationUpdate.this,String.valueOf(responseObject.isFlag())+"jfkfj",Toast.LENGTH_LONG).show();
+                        //    Toast.makeText(InvestigatorAdministrativeInformationUpdate.this,String.valueOf(responseObject.isFlag())+"jfkfj",Toast.LENGTH_LONG).show();
                             if(responseObject.isFlag()){
                                 List<InvestigatorAdministrativeInformationModel> investigatorAdministrativeInformationModels=responseObject.getSerailizedData();
                                 InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModels.get(0);

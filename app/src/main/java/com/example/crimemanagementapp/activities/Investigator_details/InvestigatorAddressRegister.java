@@ -19,6 +19,7 @@ import com.example.crimemanagementapp.activities.Investigator_details.investigat
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObject;
 import com.example.crimemanagementapp.model.miscellaneous.AddressObjectDefaultResponse;
+import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -162,14 +163,14 @@ public class InvestigatorAddressRegister extends AppCompatActivity {
                         AddressObjectDefaultResponse res=response.body();
                         AddressObject obj=res.getSerailizedData().get(0);
 
-                        Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
-                        Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()),Toast.LENGTH_LONG).show();
                         Toast.makeText(getApplicationContext(),"Successfully Registered",Toast.LENGTH_LONG).show();
                         Intent intent=new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent);
 
                     }else{
-                        Toast.makeText(getApplicationContext(),"error Occured",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
                     }
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show(); }
@@ -183,5 +184,17 @@ public class InvestigatorAddressRegister extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    protected void onStart() {
+        super.onStart();
+        Log.i("df",String.valueOf(SharedPrefManager.getInstance(this).isLogIn()));
+        if(!SharedPrefManager.getInstance(this).isLogIn()){
+            Intent intent=new Intent(getApplicationContext(), LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+        }
     }
 }

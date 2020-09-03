@@ -298,7 +298,7 @@ public class UpdatePublicUserProfile extends AppCompatActivity {
                         startActivity(intent3);
 
                     }
-                    else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}
+                    else{ Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();}
 
 
 
@@ -374,7 +374,7 @@ public class UpdatePublicUserProfile extends AppCompatActivity {
                         PublicUserDefaultResponse res= response.body();
                         PublicUserModel obj= res.getSerailizedData().get(0);
                         if(res.isFlag()){
-                            Toast.makeText(UpdatePublicUserProfile.this, obj.getEmail_id()+"HHH", Toast.LENGTH_LONG).show();
+                        //    Toast.makeText(UpdatePublicUserProfile.this, obj.getEmail_id()+"HHH", Toast.LENGTH_LONG).show();
                             setPublicUserData(obj);
 
 
@@ -512,7 +512,7 @@ public class UpdatePublicUserProfile extends AppCompatActivity {
 
 
                             }else{
-                                Toast.makeText(UpdatePublicUserProfile.this, "Some error occured", Toast.LENGTH_LONG).show();
+                                Toast.makeText(UpdatePublicUserProfile.this, "Error Occured", Toast.LENGTH_LONG).show();
                                 Toast.makeText(UpdatePublicUserProfile.this, obj.getEmail_id(), Toast.LENGTH_LONG).show();
                             }
 
@@ -553,15 +553,15 @@ public class UpdatePublicUserProfile extends AppCompatActivity {
 
                         AddressObjectDefaultResponse res= response.body();
                         AddressObject obj= res.getSerailizedData().get(0);
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                         //   Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             setAddressData(obj);
 
                         }else{
                             addressET.setText(obj.getLocation());
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

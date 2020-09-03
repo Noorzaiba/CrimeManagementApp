@@ -76,9 +76,9 @@ public class InvestigatorAdministrativeInformationList  extends AppCompatActivit
 
 
 
-                            Toast.makeText(InvestigatorAdministrativeInformationList.this,String.valueOf(investigatorAdministrativeInformationModelsList.size()),Toast.LENGTH_LONG).show();
+                           // Toast.makeText(InvestigatorAdministrativeInformationList.this,String.valueOf(investigatorAdministrativeInformationModelsList.size()),Toast.LENGTH_LONG).show();
                             InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModelsList.get(0);
-                            Toast.makeText(InvestigatorAdministrativeInformationList.this,String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(InvestigatorAdministrativeInformationList.this,String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
 
                         }else{
                             Toast.makeText(InvestigatorAdministrativeInformationList.this,"Error Occured",Toast.LENGTH_LONG);

@@ -639,9 +639,9 @@ if(id.equals("null")){
 
                         AddressObjectDefaultResponse res= response.body();
                         AddressObject obj= res.getSerailizedData().get(0);
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             setAddressData(obj);
 
                         }else{
@@ -690,7 +690,7 @@ if(id.equals("null")){
                         if(responseObject.isFlag()){
                             List<InvestigatorAdministrativeInformationModel> investigatorAdministrativeInformationModels=responseObject.getSerailizedData();
                             InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModels.get(0);
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
+                         //   Toast.makeText(getApplicationContext(),String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
                             String id=String.valueOf(obj.getId());
                             InvestigatorAdministrativeTypeDetailEIdT.setText(String.valueOf(id));
                             String salary_amt=String.valueOf(obj.getSalary());
@@ -812,5 +812,7 @@ if(id.equals("null")){
 
 
     }
+
+
 
 }

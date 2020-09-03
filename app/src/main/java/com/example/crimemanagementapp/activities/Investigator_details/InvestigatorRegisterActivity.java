@@ -25,11 +25,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.crimemanagementapp.R;
+import com.example.crimemanagementapp.activities.Investigator_details.investigator_accounts.LoginActivity;
 import com.example.crimemanagementapp.activities.map.PermissionsActivity;
 import com.example.crimemanagementapp.api.RetrofitClient;
 
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorDefaultResponse;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorRegisterModel;
+import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 
 import java.io.ByteArrayOutputStream;
@@ -303,7 +305,7 @@ private boolean validation(String firstNameR,String lastNameR,String emailIdR,St
 
                     if(200==response.code()){
                          InvestigatorDefaultResponse res=response.body();
-                        Toast.makeText(InvestigatorRegisterActivity.this,String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(InvestigatorRegisterActivity.this,String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
 
                         if(res.isFlag()){
                             InvestigatorRegisterModel obj=res.getSerailizedInvestigatorModel().get(0);
@@ -352,6 +354,17 @@ private boolean validation(String firstNameR,String lastNameR,String emailIdR,St
     }
 
 
+
+    protected void onStart() {
+        super.onStart();
+        Log.i("df",String.valueOf(SharedPrefManager.getInstance(this).isLogIn()));
+        if(!SharedPrefManager.getInstance(this).isLogIn()){
+            Intent intent=new Intent(getApplicationContext(), LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+        }
+    }
 
 
 }

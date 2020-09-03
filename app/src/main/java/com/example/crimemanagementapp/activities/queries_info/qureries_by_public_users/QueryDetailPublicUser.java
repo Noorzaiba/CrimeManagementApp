@@ -120,7 +120,7 @@ public class QueryDetailPublicUser extends AppCompatActivity {
                     if(200==response.code()) {
                         InvestigatorContactUsDefaultResponse res = response.body();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(res.isFlag()),Toast.LENGTH_LONG).show();
                             List<InvestigatorContactUsModel> obj_list = res.getSerailizedData();
                             InvestigatorContactUsModel obj=obj_list.get(0);
                             String id=String.valueOf(obj.getId());
@@ -131,7 +131,7 @@ public class QueryDetailPublicUser extends AppCompatActivity {
                             docET.setText(obj.getDoc());
                             douET.setText(obj.getDou());
 
-                            Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),obj.getDescription(),Toast.LENGTH_LONG).show();
 
                         }else{
                             Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();

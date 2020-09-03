@@ -89,7 +89,7 @@ public class PublicUserDetailsActivity extends AppCompatActivity {
                         PublicUserDefaultResponse res= response.body();
                         PublicUserModel obj= res.getSerailizedData().get(0);
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(), obj.getEmail_id()+"HHH", Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(), obj.getEmail_id()+"HHH", Toast.LENGTH_LONG).show();
                             setPublicUserData(obj);
 
 
@@ -158,13 +158,13 @@ public class PublicUserDetailsActivity extends AppCompatActivity {
 
                         AddressObjectDefaultResponse res= response.body();
                         AddressObject obj= res.getSerailizedData().get(0);
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                    //    Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             setAddressData(obj);
 
                         }else{
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{

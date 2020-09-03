@@ -103,7 +103,7 @@ public class InvestigatorAdministrativeInformationRegister  extends AppCompatAct
                         if(response.code()==200){
 
                             InvestigatorDefaultResponse responseObject=response.body();
-                                Toast.makeText(InvestigatorAdministrativeInformationRegister.this,String.valueOf(responseObject.isFlag())+"jfkfj",Toast.LENGTH_LONG).show();
+                            //    Toast.makeText(InvestigatorAdministrativeInformationRegister.this,String.valueOf(responseObject.isFlag())+"jfkfj",Toast.LENGTH_LONG).show();
                                 if(responseObject.isFlag()){
                                 List<InvestigatorAdministrativeInformationModel> investigatorAdministrativeInformationModels=responseObject.getSerailizedData();
                                 InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModels.get(0);

@@ -131,7 +131,7 @@ public class InvestigatorDetailsForOtherInvestigators extends AppCompatActivity 
                         Log.i("falag",String.valueOf(res.isFlag()));
                         if(res.isFlag()){
                             InvestigatorRegisterModel invObj=res.getSerailizedInvestigatorModel().get(0);
-                            Toast.makeText(getApplicationContext(),String.valueOf(invObj.getEmail_id()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(invObj.getEmail_id()),Toast.LENGTH_LONG).show();
                             setTextInfo(invObj);
                         }else{
                             Toast.makeText(getApplicationContext(),"Error Occured",Toast.LENGTH_LONG).show();
@@ -177,14 +177,14 @@ public class InvestigatorDetailsForOtherInvestigators extends AppCompatActivity 
 
                         AddressObjectDefaultResponse res= response.body();
                         AddressObject obj= res.getSerailizedData().get(0);
-                        Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), String.valueOf(res.isFlag()), Toast.LENGTH_LONG).show();
                         if(res.isFlag()){
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getId()), Toast.LENGTH_LONG).show();
                             setAddressData(obj);
 
                         }else{
                             addressET.setText((obj.getLocation()));
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error Occured", Toast.LENGTH_LONG).show();
                         }
 
                     }else{
@@ -226,7 +226,7 @@ public class InvestigatorDetailsForOtherInvestigators extends AppCompatActivity 
                         if(responseObject.isFlag()){
                             List<InvestigatorAdministrativeInformationModel> investigatorAdministrativeInformationModels=responseObject.getSerailizedData();
                             InvestigatorAdministrativeInformationModel  obj=investigatorAdministrativeInformationModels.get(0);
-                            Toast.makeText(getApplicationContext(),String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getApplicationContext(),String.valueOf(obj.getPosition()),Toast.LENGTH_LONG).show();
 
 
                             positionET.setText(obj.getPosition());
