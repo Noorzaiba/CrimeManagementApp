@@ -590,6 +590,7 @@ if(id.equals("null")){
                                     Intent i = new Intent(getApplicationContext(), InvestigatorPut.class);
                                     i.putExtra("email",invObj.getEmail_id());
                                     startActivity(i);
+                                    finish();
                                 }else{
                                     Toast.makeText(getApplicationContext(), "Unsuccessfull", Toast.LENGTH_LONG).show();
                                     Toast.makeText(getApplicationContext(), invObj.getEmail_id(), Toast.LENGTH_LONG).show();

@@ -215,6 +215,7 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Age"
+            android:maxLength="3"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="25sp"

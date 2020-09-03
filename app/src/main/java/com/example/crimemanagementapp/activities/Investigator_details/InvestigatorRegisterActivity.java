@@ -355,16 +355,7 @@ private boolean validation(String firstNameR,String lastNameR,String emailIdR,St
 
 
 
-    protected void onStart() {
-        super.onStart();
-        Log.i("df",String.valueOf(SharedPrefManager.getInstance(this).isLogIn()));
-        if(!SharedPrefManager.getInstance(this).isLogIn()){
-            Intent intent=new Intent(getApplicationContext(), LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
 
-        }
-    }
 
 
 }
