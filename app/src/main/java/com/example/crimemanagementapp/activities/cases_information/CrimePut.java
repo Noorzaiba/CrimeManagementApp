@@ -197,14 +197,11 @@ public class CrimePut extends AppCompatActivity implements TimePickerDialog.OnTi
         });
 
 
-        timeTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        timeTV.setOnClickListener(v -> {
 
 
-                DialogFragment timePicker=new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(),"Time Picker");
-            }
+            DialogFragment timePicker=new TimePickerFragment();
+            timePicker.show(getSupportFragmentManager(),"Time Picker");
         });
 
 

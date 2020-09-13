@@ -17,6 +17,7 @@ import com.example.crimemanagementapp.activities.cases_information.CrimePut;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.cases_information.CrimeDefaultResponse;
 import com.example.crimemanagementapp.model.cases_information.CrimeLiveUpdationModel;
+import com.example.crimemanagementapp.model.miscellaneous.DeleteObject;
 import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 import java.util.List;
@@ -27,7 +28,7 @@ import retrofit2.Response;
 
 public class CrimeLiveUpdatePut extends AppCompatActivity {
     EditText crimeIdET, statementET, docET,idET,douET;
-    Button submitButton,updateButton,backButton;
+    Button submitButton,updateButton,backButton,deleteButton;
     String loggedInEmail,loggedInToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
         douET = findViewById(R.id.douET);
         idET=findViewById(R.id.idET);
         submitButton = findViewById(R.id.submitButton);
+        deleteButton = findViewById(R.id.deleteButton);
         updateButton = findViewById(R.id.updateButton);
         backButton = findViewById(R.id.backButton);
 
@@ -48,6 +50,17 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(CrimeLiveUpdatePut.this,"you can update Statements",Toast.LENGTH_LONG).show();
                 statementET.requestFocus();
+
+            }
+        });
+
+
+
+
+        this.deleteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                deleteCrimeLiveUpdate();
 
             }
         });
@@ -125,6 +138,50 @@ public class CrimeLiveUpdatePut extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
+    void deleteCrimeLiveUpdate(){
+
+        Call<DeleteObject> call= RetrofitClient
+                .getInstance()
+                .getApi()
+                .deleteCrimeLiveUpdateFacility(loggedInEmail,loggedInToken,Integer.valueOf(idET.getText().toString()));
+
+        call.enqueue(new Callback<DeleteObject>(){
+            @Override
+            public void onResponse(Call<DeleteObject> call, Response<DeleteObject> response) {
+                if (response.code() == 200) {
+                    DeleteObject d=response.body();
+                    if(d.isFlag()) {
+
+                        Intent i=new Intent(getApplicationContext(),CrimePut.class);
+                        i.putExtra("pk",Integer.parseInt(crimeIdET.getText().toString()));
+                        startActivity(i);
+                        finish();
+                    }
+                    else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}
+
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Authentication Error",Toast.LENGTH_LONG).show();
+                }
+
+            }
+            @Override
+            public void onFailure(Call<DeleteObject> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+    }
+
     void getCrimeLiveDetails() {
 
           Intent i=getIntent();

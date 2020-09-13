@@ -214,6 +214,15 @@ public interface Api {
                                                             @Body CrimeLiveUpdationModel crimeLiveUpdationModel);
 
 
+
+    @DELETE("cases_info/crime_update_live_detail/{pk}/")
+    Call<DeleteObject> deleteCrimeLiveUpdateFacility( @Header("X-USERNAME")String user_name,
+                                                   @Header("Authorization") String Token,
+                                                   @Path("pk") int pk);
+
+
+
+
     @GET("cases_info/crime_list/")
     Call<CrimeDefaultResponse> crimeRegisterGETFacility(@Header("X-USERNAME") String user_name,
                                                         @Header("Authorization") String Token);
