@@ -14,6 +14,7 @@ import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorAdministrativeInformationModel;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorDefaultResponse;
+import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ import retrofit2.Response;
 public class InvestigatorAdministrativeInformationRegister  extends AppCompatActivity {
     private EditText salaryET,achivementsET,postionET,emailET;
     private Button registerButton;
+    String loggedInEmail,loggedInToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigator_administrative_information_register);
@@ -32,6 +34,9 @@ public class InvestigatorAdministrativeInformationRegister  extends AppCompatAct
         postionET=findViewById(R.id.positionET);
         emailET=findViewById(R.id.emailIdET);
         registerButton=findViewById(R.id.registerButton);
+        loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
+        loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
+
         this.registerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -94,7 +99,7 @@ public class InvestigatorAdministrativeInformationRegister  extends AppCompatAct
             Call<InvestigatorDefaultResponse>call= RetrofitClient
                     .getInstance()
                     .getApi()
-                    .createInvestigatorAdministrativeFaciltiy(obj);
+                    .createInvestigatorAdministrativeFaciltiy(loggedInEmail,loggedInToken,obj);
 
             call.enqueue(new Callback<InvestigatorDefaultResponse>(){
                 @Override

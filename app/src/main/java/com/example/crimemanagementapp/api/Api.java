@@ -154,25 +154,36 @@ public interface Api {
 
 
     @POST("crime_manage/investigator_administrative_list/")
-    Call<InvestigatorDefaultResponse> createInvestigatorAdministrativeFaciltiy(@Body InvestigatorAdministrativeInformationModel obj);
+    Call<InvestigatorDefaultResponse> createInvestigatorAdministrativeFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                               @Header("Authorization") String Token,
+                                                                               @Body InvestigatorAdministrativeInformationModel obj);
 
     @GET("crime_manage/investigator_detail_admin_api/{pk}/")
-    Call<InvestigatorDefaultResponse> getInvestigatorAdministrativeFaciltiy(@Path("pk") int pk);
+    Call<InvestigatorDefaultResponse> getInvestigatorAdministrativeFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                            @Header("Authorization") String Token,
+                                                                            @Path("pk") int pk);
 
 
     @GET("crime_manage/investigator_administrative_list/")
-    Call<InvestigatorDefaultResponse> getAllInvestigatorAdministrativeFaciltiy();
+    Call<InvestigatorDefaultResponse> getAllInvestigatorAdministrativeFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                               @Header("Authorization") String Token);
 
     @PUT("crime_manage/investigator_detail_admin_api/{pk}/")
-    Call<InvestigatorDefaultResponse> putInvestigatorAdministrativeFaciltiy(@Path("pk") int pk,@Body InvestigatorAdministrativeInformationModel obj);
+    Call<InvestigatorDefaultResponse> putInvestigatorAdministrativeFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                            @Header("Authorization") String Token,
+                                                                            @Path("pk") int pk,@Body InvestigatorAdministrativeInformationModel obj);
 
     @GET("crime_manage/investigator_detail_admin_get_api/{email}/")
-    Call<InvestigatorDefaultResponse> getInvestigatorAdministrativeByEmailFaciltiy(@Path("email") String email);
+    Call<InvestigatorDefaultResponse> getInvestigatorAdministrativeByEmailFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                                   @Header("Authorization") String Token,
+                                                                                   @Path("email") String email);
 
 
 
     @DELETE("crime_manage/investigator_detail_admin_api/{pk}/")
-    Call<DeleteObject> deleteInvestigatorAdministrativeFaciltiy(@Path("pk") int pk);
+    Call<DeleteObject> deleteInvestigatorAdministrativeFaciltiy(@Header("X-USERNAME") String user_name,
+                                                                @Header("Authorization") String Token,
+                                                                @Path("pk") int pk);
 
 
 

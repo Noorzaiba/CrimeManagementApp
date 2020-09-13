@@ -16,6 +16,7 @@ import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorAdministrativeInformationModel;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorDefaultResponse;
 import com.example.crimemanagementapp.model.miscellaneous.DeleteObject;
+import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ import retrofit2.Response;
 public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivity {
     private EditText salaryET,idET,achivementsET,postionET,emailIdET;
     private Button updateButton,deleteButton;
+    String loggedInEmail,loggedInToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigator_administrative_information_put);
@@ -36,6 +38,9 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
         emailIdET=findViewById(R.id.emailIdET);
         updateButton=findViewById(R.id.updateButton);
         deleteButton = findViewById(R.id.deleteButton);
+        loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
+        loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
+
         getDetails();
         this.updateButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -63,7 +68,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
         Call<DeleteObject> call= RetrofitClient
                 .getInstance()
                 .getApi()
-                .deleteInvestigatorAdministrativeFaciltiy(Integer.valueOf(idET.getText().toString()));
+                .deleteInvestigatorAdministrativeFaciltiy(loggedInEmail,loggedInToken,Integer.valueOf(idET.getText().toString()));
 
         call.enqueue(new Callback<DeleteObject>(){
             @Override
@@ -139,7 +144,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
         Call<InvestigatorDefaultResponse> call= RetrofitClient
                 .getInstance()
                 .getApi()
-                .getInvestigatorAdministrativeFaciltiy(pk);
+                .getInvestigatorAdministrativeFaciltiy(loggedInEmail,loggedInToken,pk);
         call.enqueue(new Callback<InvestigatorDefaultResponse>(){
             @Override
             public void onResponse(Call<InvestigatorDefaultResponse> call, Response<InvestigatorDefaultResponse> response) {
@@ -203,7 +208,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
             Call<InvestigatorDefaultResponse> call= RetrofitClient
                     .getInstance()
                     .getApi()
-                    .putInvestigatorAdministrativeFaciltiy(Integer.parseInt(idR),obj);
+                    .putInvestigatorAdministrativeFaciltiy(loggedInEmail,loggedInToken,Integer.parseInt(idR),obj);
 
             call.enqueue(new Callback<InvestigatorDefaultResponse>(){
                 @Override

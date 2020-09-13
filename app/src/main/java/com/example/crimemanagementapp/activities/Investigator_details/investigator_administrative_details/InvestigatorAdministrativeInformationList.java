@@ -16,6 +16,7 @@ import com.example.crimemanagementapp.R;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorAdministrativeInformationModel;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorDefaultResponse;
+import com.example.crimemanagementapp.storage.SharedPrefManager;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ import retrofit2.Response;
 public class InvestigatorAdministrativeInformationList  extends AppCompatActivity {
     ListView listView;
     int investigator_admin_list_size;
+    String loggedInEmail,loggedInToken;
     String position_list[];
     String id_list[];
     String email_list[];
@@ -34,10 +36,12 @@ public class InvestigatorAdministrativeInformationList  extends AppCompatActivit
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigator_administrative_information_list);
         listView = findViewById(R.id.listView);
+        loggedInEmail= SharedPrefManager.getInstance(getApplicationContext()).getUser().getEmail();
+        loggedInToken=SharedPrefManager.getInstance(getApplicationContext()).getUser().getToken();
         Call<InvestigatorDefaultResponse> call = RetrofitClient
                 .getInstance()
                 .getApi()
-                .getAllInvestigatorAdministrativeFaciltiy();
+                .getAllInvestigatorAdministrativeFaciltiy(loggedInEmail,loggedInToken);
         call.enqueue(new Callback<InvestigatorDefaultResponse>(){
             @Override
             public void onResponse(Call<InvestigatorDefaultResponse> call, Response<InvestigatorDefaultResponse> response) {

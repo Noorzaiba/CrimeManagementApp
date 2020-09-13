@@ -681,7 +681,7 @@ if(id.equals("null")){
         Call<InvestigatorDefaultResponse> call= RetrofitClient
                 .getInstance()
                 .getApi()
-                .getInvestigatorAdministrativeByEmailFaciltiy(receivedEmail);
+                .getInvestigatorAdministrativeByEmailFaciltiy(loggedInEmail,loggedInToken,receivedEmail);
         call.enqueue(new Callback<InvestigatorDefaultResponse>(){
             @Override
             public void onResponse(Call<InvestigatorDefaultResponse> call, Response<InvestigatorDefaultResponse> response) {

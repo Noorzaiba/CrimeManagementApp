@@ -435,7 +435,7 @@ boolean validation(String phoneNumberR,String adhaarNoR){
         Call<InvestigatorDefaultResponse> call= RetrofitClient
                 .getInstance()
                 .getApi()
-                .getInvestigatorAdministrativeByEmailFaciltiy(loggedInEmail);
+                .getInvestigatorAdministrativeByEmailFaciltiy(loggedInEmail,loggedInToken,loggedInEmail);
         call.enqueue(new Callback<InvestigatorDefaultResponse>(){
             @Override
             public void onResponse(Call<InvestigatorDefaultResponse> call, Response<InvestigatorDefaultResponse> response) {
