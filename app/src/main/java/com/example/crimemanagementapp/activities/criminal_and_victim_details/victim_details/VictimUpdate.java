@@ -387,6 +387,7 @@ public class VictimUpdate extends AppCompatActivity {
                                     Intent i=new Intent(getApplicationContext(), VictimUpdate.class);
                                     i.putExtra("pk",Integer.parseInt(idET.getText().toString()));
                                     startActivity(i);
+                                    finish();
                                 }
 
                             }else{

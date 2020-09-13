@@ -391,6 +391,7 @@ void deleteCriminalRecord(){
                                     Intent i=new Intent(getApplicationContext(), CriminalUpdate.class);
                                     i.putExtra("pk",Integer.parseInt(idET.getText().toString()));
                                     startActivity(i);
+                                    finish();
                                 }
 
 
