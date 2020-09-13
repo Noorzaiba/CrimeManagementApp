@@ -171,6 +171,13 @@ public interface Api {
 
 
 
+    @DELETE("crime_manage/investigator_detail_admin_api/{pk}/")
+    Call<DeleteObject> deleteInvestigatorAdministrativeFaciltiy(@Path("pk") int pk);
+
+
+
+
+
     @POST("crime_scene_pictures/crime_scene_images_list/")
     Call<CrimeScenePicturesDefaultResponse> crimeSceneImageRegisterFacility(@Header("X-USERNAME")String user_name,
                                                                             @Header("Authorization") String Token,

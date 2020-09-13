@@ -135,6 +135,15 @@
         android:textSize="20sp"
         android:background="@drawable/custom_button"
         android:text="click to save changes" />
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button"
+                android:text="Delete Details" />
 
 </LinearLayout>
     </ScrollView>

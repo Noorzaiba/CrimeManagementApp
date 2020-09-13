@@ -11,9 +11,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.crimemanagementapp.R;
+import com.example.crimemanagementapp.activities.cases_information.CrimePut;
 import com.example.crimemanagementapp.api.RetrofitClient;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorAdministrativeInformationModel;
 import com.example.crimemanagementapp.model.investigator_details.InvestigatorDefaultResponse;
+import com.example.crimemanagementapp.model.miscellaneous.DeleteObject;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ import retrofit2.Response;
 
 public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivity {
     private EditText salaryET,idET,achivementsET,postionET,emailIdET;
-    private Button updateButton;
+    private Button updateButton,deleteButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigator_administrative_information_put);
@@ -33,6 +35,7 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
         postionET=findViewById(R.id.positionET);
         emailIdET=findViewById(R.id.emailIdET);
         updateButton=findViewById(R.id.updateButton);
+        deleteButton = findViewById(R.id.deleteButton);
         getDetails();
         this.updateButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -42,8 +45,55 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
             }
         });
 
+        this.deleteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                deleteAdminInvest();
+
+            }
+        });
+
+
     }
 
+
+
+    void deleteAdminInvest(){
+
+        Call<DeleteObject> call= RetrofitClient
+                .getInstance()
+                .getApi()
+                .deleteInvestigatorAdministrativeFaciltiy(Integer.valueOf(idET.getText().toString()));
+
+        call.enqueue(new Callback<DeleteObject>(){
+            @Override
+            public void onResponse(Call<DeleteObject> call, Response<DeleteObject> response) {
+                if (response.code() == 200) {
+                    DeleteObject d=response.body();
+                    if(d.isFlag()) {
+
+                        Intent i=new Intent(getApplicationContext(),InvestigatorAdministrativeInformationList.class);
+                        startActivity(i);
+                        finish();
+                    }
+                    else{ Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();}
+
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Authentication Error",Toast.LENGTH_LONG).show();
+                }
+
+            }
+            @Override
+            public void onFailure(Call<DeleteObject> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+    }
 
     boolean validation(String salaryR,String positionR,String achivementsR,String emailR){
         if (!Patterns.EMAIL_ADDRESS.matcher(emailR).matches()){
@@ -75,6 +125,13 @@ public class InvestigatorAdministrativeInformationUpdate extends AppCompatActivi
         return true;
 
     }
+
+
+
+
+
+
+
     void getDetails(){
 
         Intent i= getIntent();
